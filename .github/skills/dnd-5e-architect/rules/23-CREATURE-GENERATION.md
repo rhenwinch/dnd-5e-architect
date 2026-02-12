@@ -12,6 +12,7 @@ Creatures are not random encounters or stat blocks — they are ecological actor
 
 Every creature must include:
 
+- **Base Tabular Stat Block** — MANDATORY: Full D&D 5e stat block with all combat statistics for DM reference
 - **Ecological Role** — Why does this creature exist in the world?
 - **Faction or Power Tie** — Which faction controls, uses, or opposes this creature?
 - **Behavioral Twist** — What makes this creature more than its stat block?
@@ -29,8 +30,38 @@ Every creature must include:
 ```
 ## [Creature Canonical Name]
 
-**Base Stat Block:** [reference to official D&D 5e creature, or note if custom]
-**CR:** [Challenge Rating]
+**Base Stat Block Reference:** [official D&D 5e creature used as baseline, or note "Custom" if original]
+
+**REQUIRED: Base Tabular Stat Block**
+All creatures MUST include a playable stat block for DMs to reference during encounters:
+
+| Stat | Value |
+|---|---|
+| **Armor Class** | [AC value] |
+| **Hit Points** | [average (dice formula)] |
+| **Speed** | [movement speeds] |
+| **STR** | [score (+mod)] |
+| **DEX** | [score (+mod)] |
+| **CON** | [score (+mod)] |
+| **INT** | [score (+mod)] |
+| **WIS** | [score (+mod)] |
+| **CHA** | [score (+mod)] |
+| **Saving Throws** | [if any] |
+| **Skills** | [if any] |
+| **Damage Resistances** | [if any] |
+| **Damage Immunities** | [if any] |
+| **Condition Immunities** | [if any] |
+| **Senses** | [vision types and passive Perception] |
+| **Languages** | [languages known] |
+| **Challenge Rating** | [CR (XP)] |
+
+**Actions:**
+- **[Action Name]:** [attack bonus, range, damage, and effects]
+- **[Action Name]:** [attack bonus, range, damage, and effects]
+
+**Special Abilities (if any):**
+- **[Ability Name]:** [description and mechanics]
+
 **Threat Tier:** [Street / Local / Regional / Pivotal / Cosmic]
 
 **Ecological Role:** [Why does this creature exist in the world?]

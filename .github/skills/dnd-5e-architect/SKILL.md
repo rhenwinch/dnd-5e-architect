@@ -57,6 +57,7 @@ Only load what you need:
 - `rules/23-CREATURE-GENERATION.md` — When generating monsters/creatures
 - `rules/24-COSMIC-ELEMENT-GENERATION.md` — When generating gods/cosmic entities
 - `rules/25-REGION-GENERATION.md` — When generating large-scale geography
+- `rules/26-ITEM-GENERATION.md` — When generating items, weapons, or treasure
 
 ### Load by System (CROSS-SYSTEM)
 When working with specific mechanics:
@@ -119,6 +120,7 @@ worlds/
 - All lowercase with hyphens (e.g., `shadow-crown-empire`)
 - Pattern: `[world-name]-[type].md`
 - Campaigns nest under world folder
+- Items file consolidates all weapons, armor, treasure, and magical items
 
 ## Example Usage
 
@@ -142,6 +144,13 @@ worlds/
 - CORE files (rules/01-05)
 - `rules/10-SESSION-INITIALIZATION.md` (mode detection)
 - `rules/70-CAMPAIGN-FORMAT.md` (format rules)
+
+### Example 4: Generate treasure hoard or custom magic item
+**Load:**
+- CORE files (rules/01-05)
+- `rules/26-ITEM-GENERATION.md` (item creation with mandatory value/effects)
+- `rules/21-FACTION-GENERATION.md` (if item has faction ties)
+- `rules/33-REWARD-SYSTEMS.md` (to match item to player desires)
 - `rules/33-REWARD-SYSTEMS.md` (player desires)
 
 ## Key Features
