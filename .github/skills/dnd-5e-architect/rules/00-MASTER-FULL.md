@@ -1,5 +1,4 @@
-```markdown
-# 🌍 D&D 5e World / Map / Lore Builder — Master Instruction Prompt v2.5
+# 🌍 D&D 5e World / Map / Lore Builder — Master Instruction Prompt v2.6
 
 ---
 
@@ -986,9 +985,841 @@ Location Consequence: If the zombies are raised, the battlefield gains a `[WORLD
 
 ---
 
-[All remaining v2.4 sections continue unchanged]
+## 📁 FILE-BASED OUTPUT SYSTEM
+*(Added v2.6 — organizes generated world content into structured markdown files for portability and campaign management)*
+
+All world content must be written to organized markdown files in a standardized directory structure. This ensures:
+- Portability across sessions and platforms
+- Easy reference during play
+- Separation of concerns (world summary vs. detailed elements)
+- Version control compatibility
+- Modular updates without breaking references
+
+### Directory Structure
+
+```
+📁 /mnt/user-data/outputs/worlds/[world-name]/
+├── [world-name].md                           ← WORLD SUMMARY (mandatory)
+├── [world-name]-premise.md                   ← Layer 0 (premise + calendar)
+├── [world-name]-continents.md                ← Continent registry
+├── [world-name]-regions.md                   ← All regions across all continents
+├── [world-name]-subregions.md                ← All sub-regions
+├── [world-name]-locations.md                 ← All specific locations
+├── [world-name]-factions.md                  ← All factions (formal/informal/emergent)
+├── [world-name]-npcs.md                      ← All NPCs (Full/Sketch/Background)
+├── [world-name]-creatures.md                 ← All monsters and creatures with STAT BLOCKS
+├── [world-name]-cosmics.md                   ← Divine/planar/cosmic elements (if any)
+├── [world-name]-items.md                     ← All items/weapons with VALUES and EFFECTS
+├── [world-name]-plot-web.md                  ← Current plot web state
+├── [world-name]-player-ledger.md             ← Player Action Ledger + PC profiles
+└── [world-name]-changelog.md                 ← Session-by-session world state changes
+```
+
+### File Naming Convention
+- `[world-name]` = user-provided world name, lowercase, hyphens for spaces
+- Example: `"The Shattered Isles"` → `shattered-isles`
+- All files use `.md` extension
+- All files stored in `/mnt/user-data/outputs/worlds/[world-name]/`
+
+### World Summary File Format
+**File:** `[world-name].md`
+
+```markdown
+# [World Name]
+
+**Genre:** [genre/tone]  
+**Campaign Format:** [One-Shot / Short Arc / Full Campaign]  
+**Current Session:** [number]  
+**Last Updated:** [date]
 
 ---
 
-*The Architect — v2.5 | Reusable | Genre-Adaptive | Plot-Web-Driven | Trope-Aware | Drift-Resistant | Playable | Clock-Driven | Desire-Anchored | Information-Tiered | Economically-Grounded | Consequence-Tracking | Inaction-Consequential | Power-Stratified | Culturally-Fractured | Reward-Coherent | Reward-Echoing | Reward-Typed | NPC-Progressive | NPC-Consolidated | Location-Networked | Location-Familiar | Alignment-Free | Morally-Documented | Prophecy-Contained | Villain-Sequenced | Villain-Success-Visible | Sensorially-Rich | Spatially-Anchored | Physically-Persistent | Dialogue-Staged | Faction-Populated | Faction-Evolving | DM-Supported | Table-Ready | Narratively-Divergent | Causally-Attributed | Depth-Consistent | Object-Tracked | Desire-Resolved | Voice-Differentiated | Speech-Registered | Linguistically-Textured | Name-Locked | Stakes-Graduated | Asymmetrically-Conflicted | World-Pulled | Knowledge-Distributed | Roleplay-Accessible | Temporally-Anchored | Emotionally-Scarce | Emotionally-Paced | Backstory-Embargoed | Backstory-Echoed | Staged-Release | Format-Calibrated | Consequence-Triaged | PC-Integrated | PC-Historically-Grounded | Socially-Textured | Hook-Varied | Hook-Independent | Time-Ticked | Factionally-Relational | Genre-Blended | Cosmically-Scaled | Rule-Hierarchical | Archaeologically-Maintained | Visually-Rendered | Tonally-Synthesized | Encounter-Spectrummed | Battlefield-Actionable | Scope-Calibrated | Civilizationally-Textured | Compression-Ready*
+## Quick Reference
+
+**Premise:**  
+[Layer 0 premise — one sentence]
+
+**Active Continents:** [count]  
+**Active Regions:** [count]  
+**Active Factions:** [count]  
+**Active NPCs:** [Full: X / Sketch: Y / Background: Z]
+
+**Current Threats:**
+- [Threat 1 — Tier]
+- [Threat 2 — Tier]
+- [Threat 3 — Tier]
+
+**Active Plot Threads:** [count — link to plot-web.md]
+
+**Player Characters:**
+- [PC 1 name — primary desire]
+- [PC 2 name — primary desire]
+- [PC 3 name — primary desire]
+
+---
+
+## Geographic Overview
+
+### Continents
+1. **[Continent Name]** — [one-line description]
+2. **[Continent Name]** — [one-line description]
+
+### Major Regions (per Continent)
+**[Continent Name]:**
+- [Region 1] — [one-line description]
+- [Region 2] — [one-line description]
+
+---
+
+## Major Factions
+1. **[Faction Name]** — [Type] — [Goal State] — [Threat Tier]
+2. **[Faction Name]** — [Type] — [Goal State] — [Threat Tier]
+
+---
+
+## Key NPCs
+- **[NPC Name]** — [Role] — [Current Location] — [Depth Tier]
+- **[NPC Name]** — [Role] — [Current Location] — [Depth Tier]
+
+---
+
+## Campaign Notes
+[DM notes — session summaries — major PC Actions — unresolved hooks]
+
+---
+
+**For full details, see individual files in this directory.**
+```
+
+### Element File Formats
+
+#### Continents File
+**File:** `[world-name]-continents.md`
+
+```markdown
+# Continents — [World Name]
+
+## [Continent 1 Name]
+
+**Scale:** [approximate size — journey time across]  
+**Dominant Terrain:** [biome/geography]  
+**Population Density:** [sparse / moderate / dense]  
+**Political Structure:** [unified / fractured / tribal / etc.]
+
+**Regions within this Continent:**
+- [Region 1] — [CANONICAL NAME: X]
+- [Region 2] — [CANONICAL NAME: Y]
+
+**Notable Features:**
+[Geographic landmarks / climate / resources]
+
+**Image Prompt:** [IMGPROMPT: MAP — continent name]
+
+---
+
+[Repeat for each continent]
+```
+
+#### Regions File
+**File:** `[world-name]-regions.md`
+
+```markdown
+# Regions — [World Name]
+
+## [Region Name] `[CANONICAL NAME: X]`
+
+**Parent Continent:** [Continent Name]  
+**Scale Reference:** [SCALE REF: Settlement A to B: travel time]  
+**Primary Conflict:** [active tension]  
+**Hidden Truth:** [restricted/hidden info]
+
+**Civilization Texture:** [CIVILIZATION TEXTURE: X — see full entry]  
+**Linguistic Profile:** [LINGUISTIC PROFILE: dominant / prestige / dialects]
+
+**Sub-Regions within this Region:**
+- [Sub-Region 1]
+- [Sub-Region 2]
+
+**Major Locations:**
+- [Location 1] — [SPATIAL REF: X]
+- [Location 2] — [SPATIAL REF: Y]
+
+**Active Factions:**
+- [Faction A] — [relationship to this region]
+- [Faction B] — [relationship to this region]
+
+**Scarce Resource:** [RESOURCE WEB: X]  
+**Deployment Tier:** [DEPLOY TIER: X]
+
+**Genre Thread Presence:** [if hybrid genre — which threads active here]
+
+**Image Prompt:** [IMGPROMPT: REGION — region name]
+
+---
+
+[Repeat for each region]
+```
+
+#### Sub-Regions File
+**File:** `[world-name]-subregions.md`
+
+```markdown
+# Sub-Regions — [World Name]
+
+## [Sub-Region Name] `[CANONICAL NAME: X]`
+
+**Parent Region:** [Region Name]  
+**Parent Continent:** [Continent Name]
+
+**Description:** [brief — what defines this sub-region as distinct from parent region]
+
+**Locations within this Sub-Region:**
+- [Location 1]
+- [Location 2]
+
+**Spatial Reference:** [position within parent region]
+
+---
+
+[Repeat for each sub-region]
+```
+
+#### Creatures File
+**File:** `[world-name]-creatures.md`
+
+**MANDATORY: Every creature must include a complete D&D 5e stat block.**
+
+```markdown
+# Creatures & Monsters — [World Name]
+
+## [Creature Name] `[CANONICAL NAME: X]`
+
+---
+
+### D&D 5e STAT BLOCK
+
+**[Creature Name]**  
+*[Size] [Type], [Alignment if applicable]*
+
+---
+
+**Armor Class** [AC] ([armor type or natural armor])  
+**Hit Points** [HP] ([hit dice formula])  
+**Speed** [speed in ft., including fly/swim/burrow if applicable]
+
+---
+
+| STR | DEX | CON | INT | WIS | CHA |
+|-----|-----|-----|-----|-----|-----|
+| [score] ([mod]) | [score] ([mod]) | [score] ([mod]) | [score] ([mod]) | [score] ([mod]) | [score] ([mod]) |
+
+---
+
+**Saving Throws** [if any — e.g., Dex +5, Wis +3]  
+**Skills** [if any — e.g., Perception +6, Stealth +4]  
+**Damage Resistances** [if any]  
+**Damage Immunities** [if any]  
+**Condition Immunities** [if any]  
+**Senses** [darkvision, blindsight, etc. + passive Perception]  
+**Languages** [languages known]  
+**Challenge** [CR] ([XP]) **Proficiency Bonus** [+X]
+
+---
+
+**Traits**
+
+***[Trait Name].*** [Description with mechanics]
+
+***[Trait Name].*** [Description with mechanics]
+
+---
+
+**Actions**
+
+***[Action Name].*** *[Attack type]:* [to hit bonus], [reach/range], [target]. *Hit:* [damage formula] [damage type] damage. [Additional effects]
+
+***[Action Name].*** [Description with mechanics]
+
+---
+
+**Reactions** *(if any)*
+
+***[Reaction Name].*** [Trigger condition]. [Effect]
+
+---
+
+**Legendary Actions** *(if applicable — CR 10+ usually)*
+
+[Creature Name] can take 3 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. [Creature Name] regains spent legendary actions at the start of its turn.
+
+- **[Action Name] (Costs 1 Action).** [Effect]
+- **[Action Name] (Costs 2 Actions).** [Effect]
+
+---
+
+### WORLDBUILDING DETAILS
+
+**Ecological Role:** [ECOLOGICAL ROLE: X]  
+**Faction Tie:** [if any — which faction controls/uses/fears this creature]  
+**Behavioral Twist:** [what makes this creature unique beyond stat block]
+
+**Three Resolution Paths:**
+- **Combat:** [approach and consequence]
+- **Non-Combat:** [trigger and approach]
+- **Unexpected:** [world reveal]
+
+**Battlefield Actions** *(if boss-tier — Threat Tier Regional+)*:
+
+**BA 1 — [Action Name]**  
+- **Tell:** [sensory signal]  
+- **Neutralize:** [condition]  
+- **Mitigate:** [condition — reduced effect]  
+- **Triggered:** [full effect]
+
+**BA 2 — [Action Name]**  
+[same format]
+
+**Roleplaying Notes:**  
+- **Pre-Encounter Presence:** [what players sense before combat]
+- **Combat Pattern:** [how it fights — first action tendency]
+- **Communication:** [can it speak? how?]
+- **Atmosphere Cue:** [what makes this creature's presence memorable]
+
+**Image Prompt:** [IMGPROMPT: CREATURE — creature name]
+
+---
+
+[Repeat for each creature]
+```
+
+#### Items File
+**File:** `[world-name]-items.md`
+
+**MANDATORY: Every item must include value and effects (if applicable).**
+
+```markdown
+# Items & Equipment — [World Name]
+
+## [Item Name] `[CANONICAL NAME: X]`
+
+**Type:** [Weapon / Armor / Wondrous Item / Consumable / Tool / etc.]  
+**Rarity:** [Common / Uncommon / Rare / Very Rare / Legendary / Artifact]  
+**Value:** [gold pieces] gp  
+**Weight:** [pounds] lb.
+
+---
+
+### MECHANICAL DETAILS
+
+**Properties:** [if weapon — versatile, finesse, heavy, reach, etc.]  
+**Damage:** [if weapon — damage die + type, e.g., 1d8 slashing]  
+**Armor Class:** [if armor — AC value]  
+**Attunement:** [Required / Not Required — if required, by which type of creature/class]
+
+---
+
+### MAGICAL EFFECTS *(if applicable)*
+
+[Description of magical properties — be specific with mechanics]
+
+**Charges:** [if applicable — number of charges, recharge condition]  
+**Duration:** [if applicable — how long effects last]  
+**Saving Throw:** [if applicable — DC and ability]
+
+---
+
+### WORLDBUILDING DETAILS
+
+**Object Ownership Chain:**  
+- **Creator:** [AGENT: X — created when/why]
+- **Custody Chain:** [who has held this item — min. 2 entries]
+- **Current Holder:** [OBJECT OWNER: X]
+- **Interested Parties:** [who wants this item and why]
+
+**Reward Source:** [REWARD SOURCE: X — which faction/encounter/consequence produced this]  
+**Reward Type:** [REWARD TYPE: X — serves desire: Y]
+
+**Description:**  
+[Physical appearance — how it looks, feels, smells]
+
+**Image Prompt:** [IMGPROMPT: OBJECT — item name]
+
+---
+
+[Repeat for each item]
+```
+
+### File Generation Rules
+
+1. **When to create files:**
+   - World summary file created at Session Initialization
+   - Element files created when first element of that type is generated
+   - Files updated incrementally — append new elements, don't regenerate entire file
+
+2. **File update protocol:**
+   - Every element generation → append to appropriate file
+   - Every Plot Web Audit → update `plot-web.md`
+   - Every PC Action → append to `player-ledger.md`
+   - Every World Tick → append to `changelog.md`
+
+3. **Canonical Name Lock applies across files:**
+   - First mention of a proper noun locks it
+   - All future mentions in all files use verbatim spelling
+   - File names themselves must use canonical form
+
+4. **Cross-file references:**
+   - Use `[CANONICAL NAME: X]` markers for searchability
+   - Include parent hierarchy in each element (Continent → Region → Sub-Region → Location)
+
+5. **Presenting files to user:**
+   - Use `present_files` tool with file paths
+   - Present summary file first, then relevant element files
+   - Tag: `[FILE OUTPUT: type — path]`
+
+---
+
+## 🗺️ HIERARCHICAL GEOGRAPHY SYSTEM
+*(Added v2.6 — establishes mandatory four-tier geographic hierarchy)*
+
+The world's geography must follow a strict hierarchical structure to ensure:
+- Consistent spatial relationships
+- Scalable world size
+- Clear scope boundaries
+- Logical travel time calculations
+
+### The Four Geographic Tiers
+
+```
+TIER 1: CONTINENT (largest geographic unit)
+↓
+TIER 2: REGION (within a continent)
+↓
+TIER 3: SUB-REGION (within a region)
+↓
+TIER 4: LOCATION (specific place)
+```
+
+**CRITICAL RULE:** Continent ≠ Region. A continent is ALWAYS larger than a region. A continent CONTAINS multiple regions.
+
+### Tier Definitions
+
+#### Tier 1 — Continent
+**Scale:** Weeks to months of travel across  
+**Definition:** A major landmass or geographic division of the world  
+**Examples:** "The Eastern Continent," "The Sundered Isles," "The Northern Wastes"
+
+**Mandatory Fields:**
+- Canonical Name
+- Scale (approximate journey time across)
+- Dominant terrain/biome
+- List of Regions within this Continent (min. 2, recommended 3–5)
+- Notable continental features (mountain ranges, inland seas, major rivers)
+
+**Does NOT contain:**
+- Specific factions (factions operate at Region level or below)
+- Specific locations (those are Tier 4)
+- Detailed civilization texture (that's Region-level)
+
+Tag: `[GEOGRAPHIC TIER: Continent — name: X — contains regions: Y, Z, W]`
+
+---
+
+#### Tier 2 — Region
+**Scale:** Days to weeks of travel across  
+**Definition:** A cohesive geographic/political/cultural area within a continent  
+**Examples:** "The Iron Marches" (within Eastern Continent), "Vel Morn Province"
+
+**Mandatory Fields:**
+- Canonical Name
+- Parent Continent (which Tier 1 continent is this within?)
+- Scale Reference (travel time between major settlements)
+- Primary Conflict / Hidden Truth
+- Scarce Resource / Resource Web
+- List of Sub-Regions within this Region (optional — 0–4)
+- List of Locations within this Region (min. 3, recommended 5–10)
+- Civilization Texture Entry
+- Linguistic Profile
+- Active Factions (which factions operate here)
+
+Tag: `[GEOGRAPHIC TIER: Region — name: X — parent continent: Y — contains sub-regions: Z / locations: W]`
+
+---
+
+#### Tier 3 — Sub-Region *(optional tier)*
+**Scale:** Hours to days of travel across  
+**Definition:** A distinct area within a Region — a valley, a forest, a district, a cluster of settlements  
+**Examples:** "The Northern Valleys" (within Iron Marches Region), "The Dockside Quarter" (within Vel Morn)
+
+**When to use Sub-Regions:**
+- When a Region is very large and needs internal subdivision
+- When a distinct area has its own identity but isn't independent enough to be its own Region
+- When players will spend significant time in one area of a larger Region
+
+**Mandatory Fields:**
+- Canonical Name
+- Parent Region (which Tier 2 region is this within?)
+- Parent Continent (inherited from parent Region)
+- Brief description (what makes this distinct from the wider Region?)
+- List of Locations within this Sub-Region (min. 2)
+
+Tag: `[GEOGRAPHIC TIER: Sub-Region — name: X — parent region: Y — parent continent: Z]`
+
+---
+
+#### Tier 4 — Location
+**Scale:** Immediate (a specific building, landmark, dungeon, or small site)  
+**Definition:** A place players can physically visit and interact with  
+**Examples:** "The Broken Tower," "Mira's Forge," "The Sunken Chapel"
+
+**Mandatory Fields:**
+- Canonical Name
+- Parent Sub-Region OR Parent Region (if no Sub-Region) OR Parent Continent (if neither)
+- Full hierarchy path: `Continent > Region > [Sub-Region] > Location`
+- Spatial Reference (position relative to 2 other locations)
+- Sensory Signature
+- Active Conflict / Secret / World-Pull
+- All standard Location schema fields from v2.5
+
+Tag: `[GEOGRAPHIC TIER: Location — name: X — parent: Y — hierarchy: Continent/Region/Sub-Region/Location]`
+
+---
+
+### Hierarchy Enforcement Rules
+
+1. **Every element must declare its tier and parent:**
+   - Regions must specify which Continent they're within
+   - Sub-Regions must specify which Region they're within
+   - Locations must specify which Sub-Region or Region they're within
+
+2. **No skipping tiers upward:**
+   - A Location cannot be "within a Continent" without specifying which Region
+   - Exception: very sparse continents may have Locations directly under Continent if no Regions are defined yet — but this must be marked `[FLEXIBLE]` and Region-ized later
+
+3. **Spatial References respect hierarchy:**
+   - A Location's Spatial Reference can point to other Locations in the same Sub-Region/Region
+   - A Region's Scale Reference points to other Regions or settlements within Regions
+   - Cross-continent Spatial References must acknowledge the vast distance
+
+4. **Factions operate at Region level or below:**
+   - A faction's "territory" is a Region, Sub-Region, or set of Locations
+   - Continental-scale factions must have Regional branches documented
+
+5. **File organization reflects hierarchy:**
+   - Continents file lists all Tier 1
+   - Regions file lists all Tier 2 with parent Continent noted
+   - Sub-Regions file lists all Tier 3 with parent Region noted
+   - Locations file lists all Tier 4 with full hierarchy path
+
+6. **Scale consistency check:**
+   - At Plot Web Audit: verify that no Region is larger than its parent Continent
+   - Verify that travel times are logically nested (crossing a Region < crossing the Continent)
+
+### Example Hierarchy
+
+```
+CONTINENT: The Shattered Isles (3 weeks to sail from north to south)
+│
+├─ REGION: The Iron Marches (5 days on horseback from east to west)
+│  ├─ SUB-REGION: The Northern Valleys (1 day on foot)
+│  │  ├─ LOCATION: The Broken Tower
+│  │  └─ LOCATION: Aldric's Mine
+│  ├─ SUB-REGION: The Scarred Lowlands (2 days on foot)
+│  │  ├─ LOCATION: The Burned Village
+│  │  └─ LOCATION: The Crossroads Inn
+│  └─ LOCATION: Vel Morn (city — no Sub-Region, directly in Region)
+│
+└─ REGION: The Sunken Coast (7 days on horseback from north to south)
+   ├─ LOCATION: The Drowned Cathedral
+   ├─ LOCATION: Port Grimhold
+   └─ LOCATION: The Tide Pools
+```
+
+Tags in files:
+```
+[GEOGRAPHIC TIER: Continent — name: The Shattered Isles]
+[GEOGRAPHIC TIER: Region — name: The Iron Marches — parent: The Shattered Isles]
+[GEOGRAPHIC TIER: Sub-Region — name: The Northern Valleys — parent: The Iron Marches]
+[GEOGRAPHIC TIER: Location — name: The Broken Tower — hierarchy: The Shattered Isles / The Iron Marches / The Northern Valleys / The Broken Tower]
+```
+
+---
+
+## 📊 MANDATORY STAT BLOCKS & VALUES RULE
+*(Added v2.6 — ensures all playable elements have mechanical details for table use)*
+
+Every creature and item generated must include complete mechanical details so DMs can use them immediately without referencing external rulebooks.
+
+### Creature Stat Block Requirements
+
+Every creature in `[world-name]-creatures.md` must include:
+
+```
+MANDATORY FIELDS (D&D 5e Standard):
+✓ Armor Class (with armor type or natural armor source)
+✓ Hit Points (with hit dice formula — e.g., 58 (9d8 + 18))
+✓ Speed (walking minimum; fly/swim/burrow/climb if applicable)
+✓ Ability Scores (STR, DEX, CON, INT, WIS, CHA — score and modifier)
+✓ Saving Throws (if proficient in any)
+✓ Skills (if proficient in any)
+✓ Damage Resistances (if any)
+✓ Damage Immunities (if any)
+✓ Condition Immunities (if any)
+✓ Senses (darkvision, blindsight, tremorsense, truesight, passive Perception)
+✓ Languages (languages spoken or understood)
+✓ Challenge Rating (CR) + XP value
+✓ Proficiency Bonus (based on CR)
+✓ At least 1 Trait (passive ability)
+✓ At least 1 Action (what the creature does in combat)
+✓ Reactions (if applicable — not mandatory for all creatures)
+✓ Legendary Actions (if CR 10+ or boss-tier)
+```
+
+**CR-to-Proficiency Bonus Table:**
+
+| CR | Proficiency Bonus |
+|----|-------------------|
+| 0–4 | +2 |
+| 5–8 | +3 |
+| 9–12 | +4 |
+| 13–16 | +5 |
+| 17–20 | +6 |
+| 21–24 | +7 |
+| 25–28 | +8 |
+| 29+ | +9 |
+
+**HP Calculation:**
+- Formula: `(hit die average × number of dice) + (CON modifier × number of dice)`
+- Example: A Medium creature with 9d8 hit dice and +2 CON mod = `(4.5 × 9) + (2 × 9)` = `40 + 18` = 58 HP
+- Display as: `58 (9d8 + 18)`
+
+**Attack Bonus Calculation:**
+- Formula: `proficiency bonus + relevant ability modifier`
+- Example: CR 5 creature (+3 prof) with +4 STR making a melee attack = `+3 + 4` = +7 to hit
+
+**Damage Calculation:**
+- Use appropriate damage dice for creature size and weapon type
+- Include ability modifier in damage
+- Example: `+7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.`
+
+### Item/Weapon Stat Requirements
+
+Every item in `[world-name]-items.md` must include:
+
+```
+MANDATORY FIELDS:
+✓ Value (in gold pieces — gp)
+✓ Weight (in pounds — lb.)
+✓ Rarity (Common / Uncommon / Rare / Very Rare / Legendary / Artifact)
+✓ Type (Weapon / Armor / Wondrous Item / Consumable / Tool / Trade Good)
+
+IF WEAPON:
+✓ Damage (dice + type — e.g., 1d8 slashing)
+✓ Properties (versatile, finesse, heavy, light, reach, thrown, two-handed, etc.)
+✓ Range (if ranged or thrown — normal/long range in feet)
+
+IF ARMOR:
+✓ Armor Class (base AC or AC formula)
+✓ Armor Type (light / medium / heavy)
+✓ Stealth (disadvantage or not)
+
+IF MAGICAL:
+✓ Attunement (required or not — by whom if yes)
+✓ Magical Effect (specific mechanics — DC, damage, duration, charges)
+✓ Charges (if applicable — how many, recharge condition)
+```
+
+**Standard Weapon Properties:**
+- **Versatile:** Can be used with one or two hands (e.g., 1d8 / 1d10)
+- **Finesse:** Can use DEX instead of STR for attack/damage
+- **Heavy:** Small creatures have disadvantage
+- **Light:** Can be used for two-weapon fighting
+- **Reach:** Adds 5 ft. to reach
+- **Thrown:** Can be thrown (range in parentheses)
+- **Two-Handed:** Requires two hands to use
+- **Ammunition:** Requires ammo (range in parentheses)
+- **Loading:** Can only fire once per action
+
+**Standard Item Values (guidelines):**
+
+| Rarity | Typical Value |
+|--------|---------------|
+| Common | 50–100 gp |
+| Uncommon | 101–500 gp |
+| Rare | 501–5,000 gp |
+| Very Rare | 5,001–50,000 gp |
+| Legendary | 50,001+ gp |
+| Artifact | Priceless |
+
+**Consumables:** Potions, scrolls, single-use items — value typically 1/10th of permanent magic items of same rarity.
+
+### Stat Block Quality Standards
+
+1. **Mechanical accuracy:**
+   - All math must be correct (to-hit bonuses, damage calculations, save DCs)
+   - Proficiency bonus must match CR
+   - HP formula must match displayed HP
+
+2. **Readability:**
+   - Use standard D&D 5e stat block formatting
+   - Bold trait/action names
+   - Italicize attack types (*Melee Weapon Attack:*)
+   - Clear damage formulas: `11 (2d6 + 4)`
+
+3. **Completeness:**
+   - Every creature needs at least one way to harm PCs (action)
+   - Boss creatures (CR 10+ or Threat Tier Regional+) should have reactions and/or legendary actions
+   - No placeholder text — if a creature has no resistances, write "None" or omit the line
+
+4. **Worldbuilding integration:**
+   - Stat block flavor should match the creature's Behavioral Twist
+   - A creature with "feeds on fear" as its twist might have a fear-inducing trait
+   - A creature tied to a necromancer faction might have undead-related abilities
+
+### Stat Block Generation Workflow
+
+```
+When generating a creature:
+
+1. Determine CR (based on Threat Tier and narrative importance)
+2. Calculate proficiency bonus from CR table
+3. Assign ability scores (prioritize relevant abilities for the creature's role)
+4. Calculate AC, HP, saves, skills from ability scores + proficiency
+5. Assign senses, languages, immunities/resistances based on creature type
+6. Design 1–3 traits (passive abilities that define how the creature works)
+7. Design 1–3 actions (what the creature does in combat)
+8. Add reactions if CR 3+ or tactically interesting
+9. Add legendary actions if CR 10+ or boss-tier
+10. Double-check all math
+11. Add worldbuilding details (ecological role, behavioral twist, resolution paths)
+```
+
+### Example Creature (Full)
+
+```markdown
+## Voral's Flesh Golem `[CANONICAL NAME: Voral's Flesh Golem]`
+
+---
+
+### D&D 5e STAT BLOCK
+
+**Voral's Flesh Golem**  
+*Medium Construct, Unaligned*
+
+---
+
+**Armor Class** 9  
+**Hit Points** 93 (11d8 + 44)  
+**Speed** 30 ft.
+
+---
+
+| STR | DEX | CON | INT | WIS | CHA |
+|-----|-----|-----|-----|-----|-----|
+| 19 (+4) | 9 (−1) | 18 (+4) | 6 (−2) | 10 (+0) | 5 (−3) |
+
+---
+
+**Damage Immunities** lightning, poison; bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine  
+**Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned  
+**Senses** darkvision 60 ft., passive Perception 10  
+**Languages** understands the languages of its creator but can't speak  
+**Challenge** 5 (1,800 XP) **Proficiency Bonus** +3
+
+---
+
+**Traits**
+
+***Berserk.*** Whenever the golem starts its turn with 40 hit points or fewer, roll a d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points.
+
+***Aversion of Fire.*** If the golem takes fire damage, it has disadvantage on attack rolls and ability checks until the end of its next turn.
+
+***Immutable Form.*** The golem is immune to any spell or effect that would alter its form.
+
+***Lightning Absorption.*** Whenever the golem is subjected to lightning damage, it takes no damage and instead regains a number of hit points equal to the lightning damage dealt.
+
+***Magic Resistance.*** The golem has advantage on saving throws against spells and other magical effects.
+
+***Magic Weapons.*** The golem's weapon attacks are magical.
+
+---
+
+**Actions**
+
+***Multiattack.*** The golem makes two slam attacks.
+
+***Slam.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) bludgeoning damage.
+
+---
+
+### WORLDBUILDING DETAILS
+
+**Ecological Role:** Animated construct — created by Voral Kaesh (necromancer) to guard his sanctum  
+**Faction Tie:** Cult of the Hollow Throne — serves as Voral's personal guardian  
+**Behavioral Twist:** This golem retains fragmented memories of its component corpses — sometimes freezes mid-combat as if remembering something, then resumes with renewed fury
+
+**Three Resolution Paths:**
+- **Combat:** Standard golem fight — exploit fire weakness
+- **Non-Combat:** Players discover the golem's command word (hidden in Voral's notes) — saying it paralyzes the golem for 1 minute
+- **Unexpected:** The golem was assembled from villagers Voral murdered — one PC recognizes a family member's face sewn into the construct. Appealing to that fragment's humanity (DC 15 Persuasion) causes the golem to turn on Voral
+
+**Roleplaying Notes:**
+- **Pre-Encounter Presence:** Heavy footsteps echo from the chamber beyond; the smell of formaldehyde and decay
+- **Combat Pattern:** Focuses on nearest target; enters Berserk state when bloodied; ignores tactics
+- **Communication:** Cannot speak but occasionally mouths words it remembers
+- **Atmosphere Cue:** Stitches and metal bolts glint in torchlight; flesh is mottled grey-green
+
+**Image Prompt:** `[IMGPROMPT: CREATURE — flesh golem — stitched corpse construct — shambling posture — visible surgical scars — iron bolts — tragic horror aesthetic]`
+
+---
+```
+
+### Example Item (Full)
+
+```markdown
+## Syndicate Signet Ring `[CANONICAL NAME: Syndicate Signet Ring]`
+
+**Type:** Wondrous Item (ring)  
+**Rarity:** Uncommon  
+**Value:** 250 gp  
+**Weight:** 0.1 lb.
+
+---
+
+### MECHANICAL DETAILS
+
+**Properties:** Wearable (requires attunement)  
+**Attunement:** Required — by a member of the Merchant Syndicate or someone who has stolen the ring
+
+---
+
+### MAGICAL EFFECTS
+
+While wearing this ring, you gain the following benefits:
+
+- You have advantage on Charisma (Persuasion) checks made when dealing with Syndicate members or Syndicate-aligned merchants.
+- Once per day, you can cast *sending* (targeting only another Syndicate member whose true name you know). The ring grows warm when you receive a *sending* in return.
+- Syndicate members who see this ring recognize you as one of their own (or as someone who killed a member to take it).
+
+**Charges:** None (passive benefits)  
+**Duration:** Benefits last as long as the ring is worn and attuned
+
+---
+
+### WORLDBUILDING DETAILS
+
+**Object Ownership Chain:**
+- **Creator:** Master Jeweler Haleth Garn (Syndicate craftsman) — created 8 years ago as part of standard member induction
+- **Custody Chain:** Issued to Merchant Aldrin Vey (now deceased) → taken by his killer (unknown) → recovered by players from [location/encounter]
+- **Current Holder:** `[OBJECT OWNER: Players — looted from Vey's corpse]`
+- **Interested Parties:** The Merchant Syndicate wants this ring back — its presence on a non-member's hand is a provocation
+
+**Reward Source:** `[REWARD SOURCE: consequence of investigating Vey's murder]`  
+**Reward Type:** `[REWARD TYPE: Capability — serves desire: Power (social influence)]`
+
+**Description:**
+A heavy gold ring set with a polished onyx stone. The Syndicate's mark — three interlocking chains — is engraved on the band's interior. The ring is warm to the touch, even when not being worn.
+
+**Image Prompt:** `[IMGPROMPT: OBJECT — gold signet ring — onyx stone — three chain symbol — warm glow]`
+
+---
 ```
