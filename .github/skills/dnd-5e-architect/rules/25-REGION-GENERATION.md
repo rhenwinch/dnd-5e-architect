@@ -247,6 +247,21 @@ Tag: `[SPATIAL REF: region X to Y — 10 days by horse via the King's Road]`
 - Factions operate at regional/pivotal level
 - Travel measured in weeks
 
+### Nesting Regions
+
+For large-scale regions, establish parent-child relationships:
+
+**Parent Region** (e.g., "The Shattered Continent")
+- Premise / Aesthetic / Primary Conflict / Scale Reference
+- Connection Points: `[CONTAINS: Sub-Region A, Sub-Region B, Sub-Region C]`
+
+**Child Sub-Regions** (e.g., "The Iron Kingdoms," "The Ashfall Wastes")
+- All standard Region fields
+- Connection Points: `[PART OF: Parent Region X]`
+- Spatial Reference: `[SPATIAL REF: Iron Kingdoms — western territory of Shattered Continent — 3 weeks from Capital to Ashfall border]`
+
+**Locations** always exist within a Region, never directly within a Continent.
+
 ---
 
 ## Common Region Generation Pitfalls
