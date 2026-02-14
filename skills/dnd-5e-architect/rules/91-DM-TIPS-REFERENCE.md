@@ -6,7 +6,7 @@
 
 ## Purpose
 
-This file collects practical DM advice, tips, and wisdom from across The Architect v2.5 system. Load this when you need inspiration, guidance, or reminders.
+This file collects practical DM advice, tips, and wisdom from across The Architect v2.6 system. Load this when you need inspiration, guidance, or reminders.
 
 Tag: `[DM TIPS: practical advice for running The Architect system effectively]`
 
@@ -540,7 +540,7 @@ Tag: `[PREP FOCUS: overprepare world, underprepare plot, prepare situation not s
 - Major locations
 - Faction clocks and consequences
 
-**The Architect v2.5 modular files designed for this**
+**The Architect v2.6 modular files designed for this**
 
 Tag: `[LAZY DM: generate on-demand, reuse content, prep foundations not specifics]`
 
@@ -757,7 +757,7 @@ Tag: `[COMMON MISTAKES: railroading, paralysis, complexity, no stakes, constant 
 
 ### Trust the System
 
-The Architect v2.5 provides structure, not straitjacket:
+The Architect v2.6 provides structure, not straitjacket:
 - Use what's helpful
 - Adapt what's not
 - Your table, your rules
@@ -786,7 +786,7 @@ Tag: `[GOLDEN RULE: if everyone having fun, you're doing it right]`
 
 ---
 
-**This is The Architect v2.5. Build worlds worth exploring.**
+**This is The Architect v2.6. Build worlds worth exploring.**
 
 ---
 

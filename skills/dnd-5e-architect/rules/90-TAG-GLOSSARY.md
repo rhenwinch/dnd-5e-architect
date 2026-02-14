@@ -1,4 +1,4 @@
-# 🏷️ The Architect v2.5 — Complete Tag Glossary
+# 🏷️ The Architect v2.6 — Complete Tag Glossary
 
 This glossary documents all tags used in The Architect system. Tags are categorized by function.
 
@@ -39,6 +39,9 @@ This glossary documents all tags used in The Architect system. Tags are categori
 - `[HOOK PREREQ: X — bypass: Y]` — Hook has prerequisite X but can be reached via bypass Y
 - `[HOOK CHAIN DEPTH: X — bypass at step Y: Z]` — Chain depth documentation with bypass paths
 - `[HOOK TYPE GAP: X]` — Hook type X has not appeared in recent batches; prioritize
+
+### Session Hooks & Cliffhangers
+- `[SESSION HOOK: type — thread: X]` — Session-ending hook (Revelation/Threat/Dilemma/Arrival/Discovery/Betrayal/Transformation)
 
 ---
 
@@ -302,6 +305,13 @@ This glossary documents all tags used in The Architect system. Tags are categori
 - `[EMOTIONAL BEAT: Recovery — element: X]` — Lower-stakes emotional breathing room
 - `[EMOTIONAL ARC: session X — Rising: Y / Peak: Z / Recovery: W]` — Session emotional structure
 
+### Tension Architecture
+- `[TENSION ACT: I/II/III — tension type: X]` — Current act in three-act escalation (Curiosity/Uncertainty/Dread)
+- `[TENSION RELEASE: post-victory/character/comic/downtime]` — Deliberate tension release moment
+
+### Tonal Variation
+- `[SESSION TONE: Primary — X / Secondary — Y]` — Dominant tonal quality for session (Heroic/Tense/Mysterious/Tragic/Comedic/Intimate/Epic/Horror)
+
 ---
 
 ## 🎯 CAMPAIGN FORMAT & SCOPE
@@ -341,6 +351,12 @@ This glossary documents all tags used in The Architect system. Tags are categori
 - `[RESOLUTION PATH: Combat — X]` — Combat victory approach and consequence
 - `[RESOLUTION PATH: Non-Combat — X]` — Non-violent resolution approach
 - `[RESOLUTION PATH: Unexpected — X]` — Third interpretation revealing world truth
+
+### Story-Connected Encounters
+- `[ENCOUNTER CONNECTION: type — link: X]` — Encounter story connection (plot/faction/character/location/theme/consequence)
+
+### Setpiece Encounters
+- `[SETPIECE: name — spectacle: X]` — Designed dramatic encounter with unique arena, environmental hazards, time pressure
 
 ### Battlefield Actions
 - `[BATTLEFIELD ACTION: Tell — X]` — Boss encounter Telegraph phase
@@ -386,8 +402,44 @@ This glossary documents all tags used in The Architect system. Tags are categori
 - `[ACTIVE THREAD: X — status: Y]` — Currently developing narrative thread
 - `[THREAD RESOLVED: X]` — Narrative thread concluded
 
+### "Oh Shit" Moments
+- `[OH SHIT MOMENT: type — seeds planted: session X — payoff: session Y]` — Designed memorable moment (Reveal/Inversion/Cost/Escalation)
+
+### Player Agency
+- `[AGENCY ANCHOR: choice X — irreversibility: Y — branches: Z]` — Predesigned choice point that alters campaign trajectory
+- `[AGENCY ANCHOR: visible/hidden — consequence: X]` — Whether players know choice matters at time of decision
+
 ---
 
-**Total Tags: 180+**
+## 🗺️ TRAVEL SYSTEMS
+
+### Travel Event System (Tess)
+- `[TRAVEL DISTANCE: Close/Far/Very Far — events: X]` — Narrative distance abstraction (Close=1, Far=2, Very Far=3 events)
+- `[TRAVEL EVENT: color — description]` — Curated travel event (Red=combat, Yellow=exploration, Blue=roleplay)
+- `[TRAVEL: origin → destination — distance: X — events: color/color/color]` — Complete journey documentation
+- `[TRAVEL TENSION: act X — event color bias: Y]` — Travel event tone matched to current tension act
+
+---
+
+## 🎮 FEVER DREAM DOCTRINE
+
+### Campaign Feel
+- `[FEVER DREAM: principle applied — X]` — Fever Dream principle in use (iconic moments/escalating spectacle/setpiece/meaningful loot/emotional resonance)
+
+---
+
+## 📋 SESSION & CAMPAIGN MANAGEMENT
+
+### Session Start
+- `[SESSION START: PC file verified/created]` — PC file check completed before session
+
+### Campaign Parameters
+- `[ENDING TYPE: Resolved/Unresolved/Ambiguous/Unexpected/Tied/Expanded]` — Planned campaign ending style
+- `[LITERARY MOVEMENT: X]` — Literary movement influencing campaign tone/style
+- `[PC STATUS: Pre-configured/Pending]` — Whether PCs are defined or to be added later
+
+---
+
+**Total Tags: 200+**
 
 **Usage Principle**: Tags make world architecture visible to both the LLM and the GM. They are system metadata — rarely read aloud to players, but essential for maintaining world coherence across sessions.

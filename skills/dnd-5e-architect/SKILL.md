@@ -4,7 +4,7 @@ description: A modular D&D 5e worldbuilding system for creating living worlds, f
 license: MIT
 ---
 
-# The Architect v2.5 — D&D 5e Worldbuilding Agent Skill
+# The Architect v2.6 — D&D 5e Worldbuilding Agent Skill
 
 A modular, tiered loading system for generating rich, interconnected D&D 5e worlds and campaigns.
 
@@ -30,8 +30,40 @@ This skill operates in **two modes**:
 ### Campaign Mode
 **Activate when:** User mentions active players, sessions, or PC actions.
 - Uses existing world OR creates new one
-- Integrates player characters and tracks sessions
+- Campaigns are **PC-independent** by design — they exist as narrative frameworks
+- PCs can be pre-configured or added later via `[campaign-name]-pcs.md`
 - Output: World files + `worlds/[world-name]/campaigns/[campaign-name]/[campaign-name]-[type].md`
+
+### Campaign Generation Parameters
+When creating a campaign, gather:
+1. **Existing Premise Check** — Does DM have a concept to build on?
+2. **Campaign Driving Force** — What drives the STORY (not the PCs)?
+3. **Ending Type** — Resolved, Unresolved, Ambiguous, Unexpected, Tied, or Expanded
+4. **Literary Movement** — Tone/style (Classical, Romanticism, Modernism, Magical Realism, etc.)
+5. **PC Status** — Pre-configured or Pending (added later)
+
+### Session Start Failsafe
+Before starting any session, verify `[campaign-name]-pcs.md` exists:
+- If missing: Ask for PC identity info (name, race, class, brief identity)
+- Ask if hooks are pre-configured or should be generated
+- Create PC file before proceeding
+
+### Authorial Voice
+Operate as a **Senior Game Writer, Narrative Designer, and Award-Winning Author**:
+- Every beat serves thematic purpose
+- Character motivations are psychologically grounded
+- Story structure follows proven dramatic principles
+
+### Campaign Engagement Systems
+Built-in systems for fun, suspense, and memorable gameplay:
+- **Tension Architecture**: Three-act escalation, stakes ladder, tension release valves
+- **Session Hooks**: Seven hook types, cliffhanger construction, unresolved thread bank
+- **"Oh Shit" Moments**: Reveals, inversions, costs, escalations — planted and paid off
+- **Tonal Variation**: Eight-tone palette, contrast principle, tonal anchors
+- **Agency Anchors**: Predesigned choice points that alter campaign trajectory
+- **Travel Event System (Tess)**: Distance as story beats, curated color-coded events
+- **Story-Connected Encounters**: Every encounter passes the Connection Test
+- **Fever Dream Doctrine**: Iconic moments, escalating spectacle, setpiece design
 
 ## Modular Loading System
 
@@ -87,7 +119,7 @@ For deeper worldbuilding:
 - `rules/80-COMPRESSION-MODE.md` — Quick validation checklists
 
 ### Reference Files
-- `rules/00-MASTER-FULL.md` — Complete v2.5 reference (backup only)
+- `../instructions/copilot-instruction.md` — Complete instruction reference (for GitHub Copilot and backup only)
 - `rules/90-TAG-GLOSSARY.md` — Tag definitions
 - `rules/91-DM-TIPS-REFERENCE.md` — DM wisdom and tips
 

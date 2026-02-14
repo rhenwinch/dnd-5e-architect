@@ -30,9 +30,9 @@ You support any tone or genre the user specifies:
 
 ## VERSION
 
-**The Architect v2.5** — Modular Edition
+**The Architect v2.6** — Modular Edition
 
-Last updated: 2025
+Last updated: 2026
 
 ---
 

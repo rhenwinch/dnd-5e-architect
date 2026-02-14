@@ -90,25 +90,65 @@ Ask directly: *"Are you building a world (for potential future campaigns) or run
    - Which world folder to use
    - Load existing world canon
 
-3. **Campaign Premise**
-   - Use Layer 0 format: *"[Powerful force] threatens [something valued], because [hidden reason], unless [player-shaped outcome]."*
-   - This defines the SPECIFIC story for this campaign
-   - Different campaigns in same world can have different premises
+3. **Existing Premise Check**
+   - Ask: *"Do you have an existing premise or story concept you want to build on?"*
+   - If YES: Gather the premise and use it as foundation
+   - If NO: Generate Layer 0 premise collaboratively using format: *"[Powerful force] threatens [something valued], because [hidden reason], unless [player-shaped outcome]."*
 
-4. **Player Characters**
-   - Names, races, classes, visible backgrounds
-   - Do NOT request full backstories (Backstory Embargo)
+4. **Campaign Driving Force**
+   - Ask: *"What should be the driving force of this campaign?"*
+   - This is the thematic engine — what drives the STORY, not the PCs
+   - Examples: "The collapse of an empire," "A war between gods," "The return of forgotten magic"
 
-5. **Player Count & Experience**
+5. **Ending Type**
+   - Ask: *"What type of ending do you want for this campaign?"*
+   - Options: Resolved (closed), Unresolved (cliffhanger), Ambiguous (open-ended), Unexpected (twist), Tied (full-circle), Expanded (epilogues)
 
-6. **Campaign Format** — One-Shot / Short Arc / Full Campaign
+6. **Literary Movement**
+   - Ask: *"What literary movement should influence this campaign's tone?"*
+   - Present only movements that suit the world's texture
+   - Options include: Classical, Medieval, Renaissance, Romanticism, Realism, Symbolism, Modernism, Existentialism, Magical Realism, Postmodernism, etc.
+   - See [70-CAMPAIGN-FORMAT.md](70-CAMPAIGN-FORMAT.md) for full list with descriptions
 
-7. **Player Desire Profile**
+7. **Player Character Status**
+   - Ask: *"Do you have pre-configured Player Characters for this campaign?"*
+   - If YES: Gather identity information only (name, race, class, brief identity, campaign hook)
+   - If NO: Campaign proceeds PC-independent; PCs can be added later via `[campaign-name]-pcs.md`
+
+8. **Player Count & Experience** (if PCs exist)
+
+9. **Campaign Format** — One-Shot / Short Arc / Full Campaign
+
+10. **Player Desire Profile** (if PCs exist)
 
 **Output Structure:**
 - World elements → `worlds/[world-name]/[world-name]-[type].md`
 - Campaign elements → `worlds/[world-name]/campaigns/[campaign-name]/[campaign-name]-[type].md`
+- PC file → `worlds/[world-name]/campaigns/[campaign-name]/[campaign-name]-pcs.md` (when PCs are provided)
 - Tag as `[MODE: Campaign — World: world-name]`
+
+**PC File Independence:**
+- The `[campaign-name]-pcs.md` file contains ONLY identity information
+- NO stats, inventory, or mechanical details
+- This keeps campaigns portable and system-flexible
+- See [70-CAMPAIGN-FORMAT.md](70-CAMPAIGN-FORMAT.md) for PC File Format
+
+---
+
+## Session Start Failsafe
+
+**BEFORE starting any campaign session**, verify PC readiness:
+
+1. Check for `[campaign-name]-pcs.md` file
+2. If file exists: Load PC identity information, verify hooks, proceed
+3. If file does NOT exist:
+   - STOP before narrative begins
+   - Ask: *"Before we begin, I need brief identity information for the Player Characters. Who are they?"*
+   - Gather: Name, Race, Class/Role, Brief Identity
+   - Ask: *"Is there already a preconfigured HOOK for these PCs, or should I generate integration hooks?"*
+   - Create the PC file before proceeding
+
+Tag: `[SESSION START: PC file verified/created]`
 
 ---
 
@@ -134,25 +174,6 @@ Regardless of mode, gather these when relevant:
    - Art style: Realistic, painterly, sketch, comic, etc.
    - Color palette preferences
    - See [51-IMAGE-GENERATION.md](51-IMAGE-GENERATION.md)
-
-10. **Image Style Preference** (if using visual generation)
-    - Art style: Realistic, painterly, sketch, comic, etc.
-    - Color palette preferences
-    - See [51-IMAGE-GENERATION.md](51-IMAGE-GENERATION.md)
-
-11. **Table Use Mode**
-    - Live session, prep between sessions, or solo worldbuilding?
-    - Determines pacing and detail level
-
-12. **Default Request Scope**
-    - Micro (single NPC/location), Standard (3-5 elements), or Full (complete region)?
-    - Can be adjusted per request
-    - See Request Scope Calibration in [04-CORE-OUTPUT-FORMAT.md](04-CORE-OUTPUT-FORMAT.md)
-
-13. **Genre Blend Declaration** (if hybrid)
-    - If mixing genres, declare all active threads
-    - Example: "High Fantasy + Noir" or "Gothic Horror + Political Intrigue"
-    - See [71-GENRE-SYSTEMS.md](71-GENRE-SYSTEMS.md) for blend maintenance
 
 ---
 
