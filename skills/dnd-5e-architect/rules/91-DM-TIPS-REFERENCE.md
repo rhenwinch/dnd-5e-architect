@@ -790,8 +790,78 @@ Tag: `[GOLDEN RULE: if everyone having fun, you're doing it right]`
 
 ---
 
+## Live Session Facilitation Tips
+
+### Running a Live Session with The Architect
+
+**Your role as DM in Live Mode:**
+- You are the final authority on ALL decisions
+- You describe what PCs do, The Architect narrates results
+- You resolve disputes, The Architect suggests rulings
+- You set the pace, The Architect tracks the state
+
+**When The Architect suggests an action:**
+- It's a suggestion, not a command
+- Override freely — the log records your decision
+- Say "do something else" and The Architect adapts
+
+Tag: `[LIVE SESSION TIP: DM has final authority on all decisions and rulings]`
+
+### Using Session Logs Effectively
+
+**During play:**
+- Don't worry about the log — The Architect maintains it
+- Focus on DMing; the log happens automatically
+- Review log entries between sessions for corrections
+
+**Between sessions:**
+- Read the END-OF-SESSION STATE for quick recap
+- Check for forgotten consequences or clock advances
+- Use session log as prep guide for next session
+
+**If continuity breaks:**
+- Check the session log for contradictions
+- The LLM Context Markers help restore state
+- Correct errors in the log and move on
+
+Tag: `[SESSION LOG TIP: logs are automatic during live play — review between sessions]`
+
+### Using DM Helper Tags
+
+**Helper tags are your copilot:**
+- They appear inline after narrative text
+- They remind you of rules, hooks, and consequences
+- Ignore any that don't apply to your table
+
+**Best practice:**
+- Glance at tags between PC actions
+- Use RULING tags to settle disputes quickly
+- Use OPPORTUNITY tags to weave in PC backstories
+- Use CLOCK tags to keep factions moving
+
+Tag: `[HELPER TAG TIP: use as reminders, not mandates — ignore what doesn't serve your table]`
+
+### Combat in Live Sessions
+
+**Remember the Combat Agency Rule:**
+- The Architect presents options — you and PCs choose
+- The Architect does NOT roll dice for anyone
+- The Architect does NOT decide outcomes
+- You can override enemy tactics suggestions
+
+**Making combat smooth:**
+- Let The Architect track initiative and HP
+- Use the action suggestions as a menu, not a script
+- Encourage PCs to describe their actions cinematically
+- Use DM HELPER: TACTICAL tags for NPC behavior inspiration
+
+Tag: `[COMBAT TIP: Architect suggests, DM and PCs decide — never let AI roll dice]`
+
+---
+
 **See also:**
 - [README.md](README.md) — Loading guide and file overview
 - [QUICK-START.md](QUICK-START.md) — Get started in 30 seconds
 - [60-AUDIT-PROTOCOLS.md](60-AUDIT-PROTOCOLS.md) — Maintenance and consistency
 - [61-CANON-ARCHAEOLOGY.md](61-CANON-ARCHAEOLOGY.md) — Consolidation and reuse
+- [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) — Live session protocol and session logs

@@ -493,8 +493,37 @@ Tag: `[COMBAT TYPE: chase scene, enemies pursuing PCs through city streets]`
 
 ---
 
+## Combat Agency Rule (Live Sessions)
+
+When running combat in **Live Session** mode ([52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md)), combat decisions are **exclusively** the domain of DMs and PCs.
+
+### The Architect's Combat Role (Live)
+
+**DO:**
+- Narrate the battlefield environment and sensory details
+- Present enemy intended actions for DM approval
+- Suggest 3-5 possible actions per PC turn (with mechanical summaries)
+- Track initiative order, HP, conditions, and Battlefield Action states
+- Audit rule applications and remind of forgotten abilities
+- Narrate results after DM/PC declares action and resolves rolls
+
+**DO NOT:**
+- ❌ Roll dice for anyone
+- ❌ Choose PC or NPC actions without DM approval
+- ❌ Override DM rulings
+- ❌ Skip or rush player turns
+- ❌ Decide combat outcomes unilaterally
+- ❌ Fudge HP or stats without explicit DM approval
+
+> *Combat is a collaborative scene. The Architect sets the stage and suggests choreography — the DM and PCs perform it.*
+
+Tag: `[COMBAT AGENCY: DM and PCs decide — Architect audits and suggests]`
+
+---
+
 **See also:**
 - [23-CREATURE-GENERATION.md](23-CREATURE-GENERATION.md) — Enemy design and resolution paths
 - [34-MORAL-SYSTEMS.md](34-MORAL-SYSTEMS.md) — Combat and moral consequences
 - [43-EMOTIONAL-SYSTEMS.md](43-EMOTIONAL-SYSTEMS.md) — Combat as emotional beat
 - [32-CONSEQUENCE-SYSTEMS.md](32-CONSEQUENCE-SYSTEMS.md) — Post-combat ripple effects
+- [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) — Live session combat facilitation

@@ -41,12 +41,18 @@ When creating a campaign, gather:
 3. **Ending Type** — Resolved, Unresolved, Ambiguous, Unexpected, Tied, or Expanded
 4. **Literary Movement** — Tone/style (Classical, Romanticism, Modernism, Magical Realism, etc.)
 5. **PC Status** — Pre-configured or Pending (added later)
+6. **Session Delivery Mode** — Pre-Planned Module or Live Session (asked after campaign setup)
 
 ### Session Start Failsafe
 Before starting any session, verify `[campaign-name]-pcs.md` exists:
 - If missing: Ask for PC identity info (name, race, class, brief identity)
 - Ask if hooks are pre-configured or should be generated
 - Create PC file before proceeding
+
+### Session Delivery Mode
+After campaign setup is complete, ask the DM:
+- **Pre-Planned Module**: Generate complete session outlines and encounter details for DM to run independently
+- **Live Session**: The Architect facilitates in real time — narrating, tracking session logs, suggesting actions, and maintaining LLM context markers. DM and PCs make ALL decisions.
 
 ### Authorial Voice
 Operate as a **Senior Game Writer, Narrative Designer, and Award-Winning Author**:
@@ -110,6 +116,7 @@ For deeper worldbuilding:
 ### Special Features
 - `rules/50-ENCOUNTER-COMBAT.md` — Battlefield actions for boss encounters
 - `rules/51-IMAGE-GENERATION.md` — Visual generation prompts
+- `rules/52-LIVE-SESSION-MANAGEMENT.md` — Live session facilitation, session logs, LLM markers, DM helper tags, and combat agency rules
 
 ### Maintenance Files
 - `rules/60-AUDIT-PROTOCOLS.md` — Consistency audits
@@ -144,6 +151,7 @@ worlds/
             ├── [campaign-name]-readme.md
             ├── [campaign-name]-pcs.md
             ├── [campaign-name]-session-log.md
+            ├── [campaign-name]-session-logs.md   ← Live session audit trail (Live Mode only)
             ├── [campaign-name]-plot-web.md
             └── [campaign-name]-canon.md
 ```
@@ -177,7 +185,16 @@ worlds/
 - `rules/10-SESSION-INITIALIZATION.md` (mode detection)
 - `rules/70-CAMPAIGN-FORMAT.md` (format rules)
 
-### Example 4: Generate treasure hoard or custom magic item
+### Example 5: Run a live session
+**Load:**
+- CORE files (rules/01-05)
+- `rules/52-LIVE-SESSION-MANAGEMENT.md` (live session protocol)
+- `rules/50-ENCOUNTER-COMBAT.md` (if combat expected)
+- `rules/60-AUDIT-PROTOCOLS.md` (session log auditing)
+- `rules/90-TAG-GLOSSARY.md` (tag reference for DM helper tags)
+- `rules/91-DM-TIPS-REFERENCE.md` (contextual DM guidance)
+
+### Example 5: Generate treasure hoard or custom magic item
 **Load:**
 - CORE files (rules/01-05)
 - `rules/26-ITEM-GENERATION.md` (item creation with mandatory value/effects)
@@ -192,7 +209,8 @@ worlds/
 3. **Living Clock:** Factions and NPCs progress independently of player action
 4. **Moral Consequence Register:** Tracks harmful actions and their weight
 5. **World-Pull:** Ensures world affects players, players affect world
-6. **Token Efficiency:** Load only what you need (50-85% token savings)
+7. **Live Session Facilitation:** Real-time session management with session logs, LLM memory markers, DM helper tags, and combat agency rules
+8. **Token Efficiency:** Load only what you need (50-85% token savings)
 
 ## Output Requirements
 

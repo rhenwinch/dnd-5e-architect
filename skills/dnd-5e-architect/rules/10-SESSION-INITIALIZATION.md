@@ -152,6 +152,24 @@ Tag: `[SESSION START: PC file verified/created]`
 
 ---
 
+## Session Delivery Mode
+
+**AFTER campaign parameters are gathered and PC file is verified**, ask the DM how they want to run the campaign.
+
+Ask: *"How would you like to run this campaign?"*
+
+- **Option A — Pre-Planned Module:** Generate complete session outlines, encounter details, and narrative beats the DM takes and runs at their table.
+- **Option B — Live Session:** Run the session here with The Architect as facilitator. The Architect narrates, tracks events, suggests actions, and maintains session logs. DM and PCs make ALL decisions.
+
+Tag: `[SESSION MODE: Module/Live]`
+
+**If Module:** Proceed with standard campaign generation workflow.
+**If Live:** Load [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) and activate the Live Session Protocol.
+
+**Important:** This question must be asked ONCE per campaign. The choice persists across sessions unless the DM explicitly changes it.
+
+---
+
 ## Additional Parameters (Both Modes)
 
 Regardless of mode, gather these when relevant:
@@ -218,3 +236,4 @@ Tag the initialized state:
 - [20-NPC-GENERATION.md](20-NPC-GENERATION.md) — Layer 3 generation
 - [22-LOCATION-GENERATION.md](22-LOCATION-GENERATION.md) — Layer 4 generation
 - [70-CAMPAIGN-FORMAT.md](70-CAMPAIGN-FORMAT.md) — Format-specific rules
+- [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) — Live session facilitation and session logs

@@ -433,6 +433,37 @@ This glossary documents all tags used in The Architect system. Tags are categori
 ### Session Start
 - `[SESSION START: PC file verified/created]` — PC file check completed before session
 
+### Session Delivery Mode
+- `[SESSION MODE: Module]` — DM chose pre-planned module delivery; sessions generated as outlines for DM to run independently
+- `[SESSION MODE: Live]` — DM chose live session facilitation; The Architect narrates, tracks, and suggests in real time
+
+### Live Session Management
+- `[LIVE SESSION: workflow phase — start/during/end]` — Current phase of live session workflow
+- `[FLEXIBILITY: PC choice X — adapted route — destination unchanged]` — PC deviated from expected path; narrative adapted while preserving campaign driving force
+- `[COMBAT FACILITATION: Round X — PC/NPC turn — action suggested — DM decides]` — Combat turn tracked with suggestion and DM authority noted
+- `[COMBAT AGENCY: DM and PCs decide — Architect audits and suggests]` — Combat decision authority confirmation
+- `[SESSION LOG AUDIT: verified at entry X — consistent/flagged]` — Session log consistency check result
+
+### LLM Context Markers
+- `[LLM MARKER: ACTIVE STATE — session X — entry Y]` — Current critical facts snapshot for LLM memory continuity
+- `[LLM MARKER: COMBAT STATE — session X — entry Y]` — Combat-specific state snapshot (initiative, HP, conditions, terrain)
+- `[LLM MARKER: NPC STATE — session X — entry Y]` — NPC disposition/knowledge snapshot during interaction
+- `[LLM MARKER: END-OF-SESSION — session X]` — Full session-end snapshot for cross-session continuity
+- `[LLM MARKER: SESSION RESUME — session X]` — State restoration marker at start of new session
+
+### DM Helper Tags
+- `[DM HELPER: RULING — X]` — Rules clarification or reminder for DM
+- `[DM HELPER: PACING — X]` — Session pacing suggestion
+- `[DM HELPER: TONE — X]` — Tone/mood adjustment suggestion
+- `[DM HELPER: HOOK — X]` — Available narrative hook the DM hasn't used yet
+- `[DM HELPER: CONSEQUENCE — X]` — Pending consequence reminder
+- `[DM HELPER: CLOCK — X]` — Faction clock reminder or advance suggestion
+- `[DM HELPER: CANON — X]` — Canon consistency check or contradiction flag
+- `[DM HELPER: TACTICAL — X]` — Combat tactics suggestion for NPCs
+- `[DM HELPER: REFERENCE — X]` — Quick rule or stat block reference
+- `[DM HELPER: OPPORTUNITY — X]` — Missed narrative opportunity alert (backstory hooks, NPC connections)
+- `[DM HELPER: REST — X]` — Rest/resource depletion reminder
+
 ### Campaign Parameters
 - `[ENDING TYPE: Resolved/Unresolved/Ambiguous/Unexpected/Tied/Expanded]` — Planned campaign ending style
 - `[LITERARY MOVEMENT: X]` — Literary movement influencing campaign tone/style
@@ -440,6 +471,6 @@ This glossary documents all tags used in The Architect system. Tags are categori
 
 ---
 
-**Total Tags: 200+**
+**Total Tags: 230+**
 
-**Usage Principle**: Tags make world architecture visible to both the LLM and the GM. They are system metadata — rarely read aloud to players, but essential for maintaining world coherence across sessions.
+**Usage Principle**: Tags make world architecture visible to both the LLM and the GM. They are system metadata — rarely read aloud to players, but essential for maintaining world coherence across sessions. LLM Context Markers (`⚓`) serve a special role: they are memory anchors that prevent the LLM from losing track of critical facts during live sessions.

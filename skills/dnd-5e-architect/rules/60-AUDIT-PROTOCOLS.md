@@ -596,8 +596,60 @@ Tag: `[COMMON AUDIT ISSUES: forgotten threads, inconsistent NPCs, unreleased con
 
 ---
 
+## Session Log Audit (Live Sessions)
+
+When running in **Live Session** mode ([52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md)), the `[campaign-name]-session-logs.md` file serves as the primary audit trail.
+
+### Session Log Consistency Check
+
+Perform automatically every 5 log entries during live play:
+
+```
+**Session Log Quick Audit (Entry [X]):**
+
+**Canon Consistency:**
+- Recent events match established canon? [Y/N]
+- Any NPC behaving out of character? [Y/N]
+- Any location details contradicted? [Y/N]
+
+**State Tracking:**
+- LLM Context Markers up to date? [Y/N]
+- Combat state accurate (if in combat)? [Y/N]
+- PC conditions/HP tracked correctly? [Y/N]
+
+**Consequence Queue:**
+- New consequences generated this session? [list]
+- Pending consequences from prior sessions due? [list]
+
+**Flag:** [consistent / flagged: issue description]
+```
+
+Tag: `[SESSION LOG AUDIT: verified at entry X — consistent/flagged]`
+
+### End-of-Session Audit
+
+At the end of every live session, verify:
+
+1. **Session log completeness** — Are all key events recorded?
+2. **Canon file sync** — Do world files (NPCs, factions, locations) reflect session changes?
+3. **Consequence queue** — Are new consequences tagged as PENDING?
+4. **Faction clock updates** — Did any clocks advance this session?
+5. **LLM END-OF-SESSION STATE** — Is the memory anchor complete and accurate?
+6. **DM corrections** — Ask DM: *"Any corrections to today's session log?"*
+
+### Session Log as Audit Evidence
+
+Session logs replace ad-hoc note-taking for audit purposes:
+- **Plot Web Audit**: Use session logs to verify thread progression
+- **NPC Consistency Audit**: Search logs for NPC appearances and compare behavior
+- **Consequence Web Audit**: Track consequence generation and release from log entries
+- **Faction Clock Audit**: Verify clock advances documented in session summaries
+
+---
+
 **See also:**
 - [61-CANON-ARCHAEOLOGY.md](61-CANON-ARCHAEOLOGY.md) — NPC consolidation, canon scanning
 - [31-TEMPORAL-SYSTEMS.md](31-TEMPORAL-SYSTEMS.md) — Faction clock tracking
 - [32-CONSEQUENCE-SYSTEMS.md](32-CONSEQUENCE-SYSTEMS.md) — Consequence state management
 - [33-REWARD-SYSTEMS.md](33-REWARD-SYSTEMS.md) — Desire-match audit
+- [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) — Live session protocol and session log format
