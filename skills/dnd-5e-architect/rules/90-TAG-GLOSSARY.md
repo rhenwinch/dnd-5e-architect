@@ -434,8 +434,17 @@ This glossary documents all tags used in The Architect system. Tags are categori
 - `[SESSION START: PC file verified/created]` — PC file check completed before session
 
 ### Session Delivery Mode
-- `[SESSION MODE: Module]` — DM chose pre-planned module delivery; sessions generated as outlines for DM to run independently
+- `[SESSION MODE: Module]` — DM chose pre-planned module delivery; per-session module files generated in official D&D module format
 - `[SESSION MODE: Live]` — DM chose live session facilitation; The Architect narrates, tracks, and suggests in real time
+
+### Pre-Planned Module Tags
+- `[SESSION MODULE: session number — title]` — Module file generated for this session
+- `[READ-ALOUD: scene name — location]` — Read-aloud boxed text for DM to read to players
+- `[DM TIP: category — context]` — Inline DM guidance note within module
+- `[MODULE PLANNING: session X — dramatic question — tension level]` — Pre-generation planning metadata
+- `[MODULE AUDIT: session X — pass/fail — issues found]` — Module quality audit result
+- `[DM COMPLEXITY: ★★★☆☆ — justification]` — DM preparation effort rating for the module
+- `[SESSION 0 MODULE: campaign setup — character creation — safety tools]` — Session 0 setup module generated
 
 ### Live Session Management
 - `[LIVE SESSION: workflow phase — start/during/end]` — Current phase of live session workflow
@@ -471,6 +480,6 @@ This glossary documents all tags used in The Architect system. Tags are categori
 
 ---
 
-**Total Tags: 230+**
+**Total Tags: 237+**
 
 **Usage Principle**: Tags make world architecture visible to both the LLM and the GM. They are system metadata — rarely read aloud to players, but essential for maintaining world coherence across sessions. LLM Context Markers (`⚓`) serve a special role: they are memory anchors that prevent the LLM from losing track of critical facts during live sessions.

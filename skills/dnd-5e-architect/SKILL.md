@@ -51,7 +51,7 @@ Before starting any session, verify `[campaign-name]-pcs.md` exists:
 
 ### Session Delivery Mode
 After campaign setup is complete, ask the DM:
-- **Pre-Planned Module**: Generate complete session outlines and encounter details for DM to run independently
+- **Pre-Planned Module**: Generate complete per-session module files in official D&D campaign module format — with read-aloud text, DM notes, encounter details, NPC dialogue, and appendices. DM takes the module and runs it independently.
 - **Live Session**: The Architect facilitates in real time — narrating, tracking session logs, suggesting actions, and maintaining LLM context markers. DM and PCs make ALL decisions.
 
 ### Authorial Voice
@@ -117,6 +117,7 @@ For deeper worldbuilding:
 - `rules/50-ENCOUNTER-COMBAT.md` — Battlefield actions for boss encounters
 - `rules/51-IMAGE-GENERATION.md` — Visual generation prompts
 - `rules/52-LIVE-SESSION-MANAGEMENT.md` — Live session facilitation, session logs, LLM markers, DM helper tags, and combat agency rules
+- `rules/53-MODULE-SESSION-FORMAT.md` — Pre-planned session module format (official D&D module style per-session files)
 
 ### Maintenance Files
 - `rules/60-AUDIT-PROTOCOLS.md` — Consistency audits
@@ -152,6 +153,7 @@ worlds/
             ├── [campaign-name]-pcs.md
             ├── [campaign-name]-session-log.md
             ├── [campaign-name]-session-logs.md   ← Live session audit trail (Live Mode only)
+            ├── [campaign-name]-session-[N]-module.md  ← Per-session module file (Module Mode only)
             ├── [campaign-name]-plot-web.md
             └── [campaign-name]-canon.md
 ```
@@ -184,6 +186,15 @@ worlds/
 - CORE files (rules/01-05)
 - `rules/10-SESSION-INITIALIZATION.md` (mode detection)
 - `rules/70-CAMPAIGN-FORMAT.md` (format rules)
+
+### Example 4: Generate pre-planned session modules
+**Load:**
+- CORE files (rules/01-05)
+- `rules/53-MODULE-SESSION-FORMAT.md` (module template and standards)
+- `rules/70-CAMPAIGN-FORMAT.md` (campaign structure and tension architecture)
+- `rules/50-ENCOUNTER-COMBAT.md` (encounter design)
+- `rules/33-REWARD-SYSTEMS.md` (treasure and reward design)
+- `rules/91-DM-TIPS-REFERENCE.md` (DM guidance reference)
 
 ### Example 5: Run a live session
 **Load:**

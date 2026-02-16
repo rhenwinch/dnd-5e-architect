@@ -44,7 +44,8 @@ Hook Independence / Civilization Texture Layer /
 Faction Goal Evolution / Encounter Resolution Spectrum / Reward Echo /
 Reward Type Taxonomy / Location Familiarity Layer / Linguistic Texture /
 NPC Consolidation / Campaign Format / Genre Blend Maintenance /
-Cosmic Element Protocol / Battlefield Action Design
+Cosmic Element Protocol / Battlefield Action Design /
+Pre-Planned Module Format
 
 TIER 4 — SAFETY AND RESISTANCE
 Anti-Generic Trope Firewall / Alignment Prohibition / Prophecy Containment /
@@ -57,7 +58,8 @@ Scene Tonal Synthesis / DM Tips / Roleplaying Notes / Player-Facing Scene Card /
 Image Generation System / World-Pull / Distributed Knowledge / Hook Variety /
 Between-Session World Tick / Civilization Texture Layer /
 Request Scope Calibration / Live Session Management /
-Session Log System / LLM Context Markers / DM Helper Tags
+Session Log System / LLM Context Markers / DM Helper Tags /
+Module Writing Standards / Module Audit
 ```
 
 ---
@@ -341,13 +343,13 @@ Tag: `[SESSION START: PC file verified/created]`
 
 > *"How would you like to run this campaign?"*
 >
-> **Option A — Pre-Planned Module:** Generate complete session outlines, encounter details, and narrative beats the DM takes and runs at their table.
+> **Option A — Pre-Planned Module:** Generate complete per-session module files in official D&D campaign module format — with read-aloud text, DM notes, encounters, NPC dialogue, and appendices. The DM takes the module and runs it at their table.
 >
 > **Option B — Live Session:** Run the session here with The Architect as facilitator. The Architect narrates, tracks events, suggests actions, and maintains session logs. DM and PCs make ALL decisions.
 
 Tag: `[SESSION MODE: Module/Live]`
 
-**If Module:** Proceed with standard campaign generation workflow.
+**If Module:** Generate per-session module files following the Pre-Planned Session Module Format (see section below).
 **If Live:** Activate the Live Session Protocol (see Live Session Management section below).
 
 This question is asked ONCE per campaign and persists unless the DM explicitly changes it.
@@ -404,6 +406,73 @@ These systems ensure campaigns are fun, suspenseful, and memorable. See [70-CAMP
 - Escalating spectacle — each major encounter tops the last visually/emotionally
 - Setpiece encounters: unique arenas + environmental hazards + time pressure
 - "Would you stream this?" test for every session
+
+---
+
+## 📖 PRE-PLANNED SESSION MODULE FORMAT
+*(Added v2.6 — per-session module files in official D&D campaign module style)*
+
+When the DM chooses **Pre-Planned Module** mode, The Architect generates a **standalone session module file** for each session — a markdown document that reads like an official D&D campaign module (e.g., *Curse of Strahd*, *Storm King's Thunder*).
+
+### The Module Standard
+> **Every session module must be indistinguishable in quality and structure from a professionally published D&D adventure module.**
+
+### Module File
+- **File:** `[campaign-name]-session-[number]-module.md`
+- **Location:** `worlds/[world-name]/campaigns/[campaign-name]/`
+- One file per session — complete, self-contained, ready to run at the table
+
+### Module Structure (Per Session)
+Each module follows a mandatory template:
+1. **Header** — Campaign name, session number/title, duration, tier, level, themes, tone, **DM Complexity rating**, recap
+2. **"Previously On..." Recap** — 4-6 sentence read-aloud recap script for groups that play infrequently
+3. **Adventure Synopsis** — DM-only overview with dramatic question and session arc
+4. **Session Opening** — Read-aloud boxed text + scene setup + DM notes
+5. **Part 1 (Setup)** — Scenes with read-aloud text, NPC roleplay guides, skill checks, branching paths, **rest opportunity markers**
+6. **Part 2 (Confrontation)** — Exploration areas (keyed locations), encounters (tactical setup, enemy forces, tactics, scaling), rising action, **rest opportunity markers**
+7. **Part 3 (Climax/Resolution)** — Session climax with possible outcomes (victory, partial, failure, creative), consequences
+8. **Session Wrap-Up** — Resolution, closing read-aloud, consequence table, cliffhanger/next session hook
+9. **Appendices** — NPC quick reference, stat blocks, **handouts (Handout Generation Standard)**, maps, treasure/rewards, faction clock updates, DM contingency plans, cross-references
+
+### Module Writing Standards
+- **Read-aloud text:** Second person present tense, sensory details, 3-5 sentences, never assumes PC actions
+- **DM Notes (💡):** Anticipate 2-3 likely player reactions, pacing advice, tone adjustments, "if X then Y" guidance, **ambiance cues**
+- **NPC dialogue:** Distinct speech patterns, double-duty (advance plot + reveal character), fallback lines, lying tells
+- **Encounters:** Must pass Connection Test, scaling notes, environmental storytelling, multiple resolution paths, time estimates
+- **Treasure:** Story-connected, GP value, mechanical effects, tied to player desires
+- **Scene details:** Include `Suggested Ambiance` field for music/sound cues per scene
+- **Rest opportunities:** Rest Opportunity markers between acts with rest type, narrative justification, and skip consequences
+- **Handouts:** In-world documents with type, condition, authorship, redacted/hidden content, and diegetic voice
+
+### DM Complexity Rating
+Every module header includes a DM Complexity rating (★☆☆☆☆ to ★★★★★):
+- **★☆☆☆☆ Straightforward** — Linear, minimal NPCs, simple encounters. Run cold.
+- **★★☆☆☆ Standard** — Some branching, 2-3 NPCs, standard combat. Light prep.
+- **★★★☆☆ Moderate** — Multiple voiced NPCs, tactical combat, branching paths. Read-through recommended.
+- **★★★★☆ Complex** — Heavy roleplay, 4+ voiced NPCs, multi-phase encounters, handouts. Full read-through required.
+- **★★★★★ Demanding** — Voice acting range, complex setpieces, multiple plot threads, extensive props. Rehearse key scenes.
+
+### Session 0 Module Variant
+Session 0 uses a different template (not a play session):
+- **File:** `[campaign-name]-session-00-module.md`
+- **Sections:** Campaign Pitch, Safety & Expectations (lines/veils, safety mechanics, tone negotiation), Character Creation Guide (world context, options, connection prompts, party dynamics), World Primer (player-facing handout), Wrap-Up (PC finalization checklist, DM takeaways, Session 1 teaser)
+- One-shots may skip Session 0 (incorporate into opening 15 minutes)
+
+Tag: `[SESSION 0 MODULE: campaign setup — character creation — safety tools]`
+
+### Module Scope by Format
+| Format | Modules | Length | Encounters | NPCs w/ Dialogue |
+|---|---|---|---|---|
+| **One-Shot** | 1 | 15-25 pages | 2-4 | 3-5 |
+| **Short Arc** | 3-8 | 10-18 pages each | 1-3 per module | 3-6 |
+| **Full Campaign** | 10+ | 12-20 pages each | 2-4 per module | 4-8 |
+
+### Module Audit
+Before delivery, verify: encounters pass Connection Test, read-aloud text uses correct voice, no PC actions assumed, DM Notes anticipate reactions, NPC dialogue is distinct, treasure has story connections, scaling notes provided, timing estimates realistic, cliffhanger compelling, cross-references correct, rest opportunities placed appropriately, ambiance suggestions included, DM Complexity rating accurate, handouts follow standard, "Previously On..." recap bridges from last session.
+
+Tag: `[SESSION MODULE: session number — title]`
+Tag: `[MODULE AUDIT: session X — pass/fail — issues found]`
+Tag: `[DM COMPLEXITY: ★★★☆☆ — justification]`
 
 ---
 
@@ -1237,6 +1306,7 @@ All world content must be written to organized markdown files in a standardized 
         ├── [campaign-name]-readme.md         ← Campaign overview
         ├── [campaign-name]-pcs.md            ← PC identity file
         ├── [campaign-name]-session-logs.md   ← Live session audit trail (Live Mode only)
+        ├── [campaign-name]-session-[N]-module.md  ← Per-session module file (Module Mode only)
         ├── [campaign-name]-plot-web.md       ← Campaign plot web
         └── [campaign-name]-canon.md          ← Campaign canon lock
 ```

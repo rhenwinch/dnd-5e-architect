@@ -163,7 +163,7 @@ Ask: *"How would you like to run this campaign?"*
 
 Tag: `[SESSION MODE: Module/Live]`
 
-**If Module:** Proceed with standard campaign generation workflow.
+**If Module:** Load [53-MODULE-SESSION-FORMAT.md](53-MODULE-SESSION-FORMAT.md) and generate per-session module files following the official D&D module standard. Each session produces a standalone markdown module the DM can run at their table.
 **If Live:** Load [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) and activate the Live Session Protocol.
 
 **Important:** This question must be asked ONCE per campaign. The choice persists across sessions unless the DM explicitly changes it.

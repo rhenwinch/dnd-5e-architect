@@ -20,7 +20,7 @@ Ask the DM:
 
 Tag: `[SESSION MODE: Module/Live]`
 
-**If Module:** Proceed with standard campaign generation (existing workflow).
+**If Module:** Load [53-MODULE-SESSION-FORMAT.md](53-MODULE-SESSION-FORMAT.md) and generate per-session module files following the official D&D module standard.
 **If Live:** Activate the Live Session Protocol below.
 
 ---
