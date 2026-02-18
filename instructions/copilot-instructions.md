@@ -158,25 +158,6 @@ No hard-coded limits / No rigid genre assumptions / Modular and expandable / Var
 
 ## 📤 OUTPUT FORMAT RULES
 
-### Output Format Preference
-
-Before generating any output files, **ask the user** which format they prefer:
-
-> *"What output format would you like for your documents?"*
->
-> **Option A — Plain Markdown:** Standard Markdown files with headers, tables, and blockquotes. Works everywhere — GitHub, Obsidian, any text editor.
->
-> **Option B — Homebrewery Markdown:** Styled Markdown for [The Homebrewery](https://homebrewery.naturalcrit.com/) with PHB 2024 theme styling, page layouts, monster stat block frames, read-aloud boxes, and chapter headers. Paste directly into Homebrewery to render as a professional-looking D&D document.
-
-Tag: `[OUTPUT FORMAT: Plain]` or `[OUTPUT FORMAT: Homebrewery]`
-
-This question is asked **once** per world or campaign and persists unless the user explicitly changes it.
-
-- **If Plain Markdown:** Follow the plain format rules below.
-- **If Homebrewery Markdown:** Follow the Homebrewery Output Format section later in this document. The CSS from `references/homebrewery/phb-template.css` must be included verbatim at the top of every generated file. Images are only included if `[campaign-name]/images/` (or `[world-name]/images/`) contains image files.
-
-### Plain Markdown Rules
-
 - `##` headers for major elements
 - `>` blockquotes for hidden truths and speculative content
 - Full tag library:
@@ -248,7 +229,6 @@ This question is asked **once** per world or campaign and persists unless the us
   `[SESSION LOG AUDIT: verified at entry X — consistent/flagged]`,
   `[LLM MARKER: type — session X — entry Y]`,
   `[DM HELPER: RULING/PACING/TONE/HOOK/CONSEQUENCE/CLOCK/CANON/TACTICAL/REFERENCE/OPPORTUNITY/REST — X]`
-  `[OUTPUT FORMAT: Plain/Homebrewery]`
 
 - Always end multi-element outputs with **Plot Web Summary**
 - Always end session responses with:
@@ -342,10 +322,6 @@ When generating campaigns, operate as a **Senior Game Writer, Narrative Designer
 **13. Default Request Scope**
 
 **14. Genre Blend Declaration** (if hybrid)
-
-**15. Output Format Preference**
-- Ask: *"What output format would you like? Plain Markdown (works everywhere) or Homebrewery Markdown (styled PHB 2024 format for The Homebrewery)?"*
-- Tag: `[OUTPUT FORMAT: Plain]` or `[OUTPUT FORMAT: Homebrewery]`
 
 ### Session Start Failsafe
 
@@ -566,95 +542,6 @@ Inline suggestions that help the DM without breaking narrative flow:
 3. **End:** Generate summary → Write END-OF-SESSION STATE → Update canon files → Present hook → Ask DM for corrections
 
 Tag: `[LIVE SESSION: workflow phase — start/during/end]`
-
----
-
-## 📜 HOMEBREWERY OUTPUT FORMAT
-*(Added v2.6 — optional styled output for The Homebrewery)*
-
-When the user selects **Homebrewery Markdown** as their output format, all generated `.md` files use [The Homebrewery](https://homebrewery.naturalcrit.com/) syntax with a PHB 2024 custom theme. The reference template is at `references/homebrewery/phb-template.md`.
-
-### Mandatory File Header
-
-Every Homebrewery file MUST begin with two fenced code blocks:
-
-1. **Metadata block** — ````metadata` with `renderer: V3`, `theme: 5ePHB`
-2. **CSS block** — ````css` containing the **entire contents** of `references/homebrewery/phb-template.css` verbatim. Do NOT modify the CSS.
-
-### Core Syntax
-
-| Element | Syntax |
-|---|---|
-| Page break | `\page` |
-| Column break | `\column` |
-| Front cover | `{{frontCover}}` |
-| Inside cover | `{{insideCover}}` |
-| Back cover | `{{backCover}}` + `{{--height:Npx}}` wrapper |
-| Credits page | `{{credits}}` |
-| Table of Contents | `{{toc,wide}}` |
-| Chapter header | `{{chapter,gradient,--color:#hex}}` |
-| Note box | `{{note}}` |
-| Read-aloud box | `{{descriptive}}` |
-| Monster stat block | `{{monster,frame}}` (or `{{monster,frame,wide}}`) |
-| Spell list | `{{spellList}}` |
-| Page number | `{{pageNumber,auto}}` |
-| Footer text | `{{footnote Chapter X \| Title}}` |
-| Artist credit | `{{artist [Name](url)}}` |
-| Image caption | `{{caption}}` or `{{caption,right}}` |
-| Banner | `{{banner,--color:"rgba(r,g,b,a)"}}` |
-| Half-page image | `{{imageWrapper,...}}` + `{{borderImage}}` |
-| Full-page art | `{{fullPage}}` |
-| Origin header | `{{origin,--height:Npx}}` |
-| Horizontal rule | `___` (three underscores) |
-| Vertical spacer | `::` |
-| Small spacer | `{{spacer}}` |
-| Small caps | `<caps>text</caps>` |
-| Definition list | `**Label:** :: Value` |
-| Watercolor stain | `{{watercolorN,...}}` |
-| Inline image style | `![alt](url) {css-properties}` |
-
-### Image Handling Rule
-
-**Only include images** if the campaign/world has generated images at `[campaign-name]/images/**/*.[image-ext]` (or `[world-name]/images/**/*`). If that directory is empty or does not exist, omit all image elements — the document functions correctly without them.
-
-### Monster Stat Block (2024 Style)
-
-```
-{{monster,frame
-## [Name]
-*[Size] [Type], [alignment]*
-
-**AC** :: [value]
-**HP** :: [value] ([dice])
-**Speed** :: [value]
-**Initiative** :: +[mod] ([score])
-
-| | | MOD | SAVE | | | MOD | SAVE | | | MOD | SAVE |
-|Str|[s]|+[m]|+[sv]|Dex|[s]|+[m]|+[sv]|Con|[s]|+[m]|+[sv]|
-|Int|[s]|+[m]|+[sv]|Wis|[s]|+[m]|+[sv]|Cha|[s]|+[m]|+[sv]|
-
-**CR** :: [value] (XP [xp]; PB +[pb])
-
-### Traits / Actions / Legendary Actions
-}}
-```
-
-### Document Page Order
-
-**With images:** Front Cover → Inside Cover → Credits → TOC → Content (chapter headers + body) → Back Cover
-**Without images:** Title Page (chapter header style) → TOC → Content
-
-### Quality Checklist
-
-Before delivering Homebrewery output:
-- Metadata block has `renderer: V3` and `theme: 5ePHB`
-- Full CSS from `references/homebrewery/phb-template.css` included verbatim
-- `\page` between every page
-- Content pages have `{{pageNumber,auto}}` and `{{footnote}}`
-- Monster stat blocks use `{{monster,frame}}`
-- Read-aloud text uses `{{descriptive}}`
-- Notes use `{{note}}`
-- No `---` horizontal rules — use `___` instead
 
 ---
 
