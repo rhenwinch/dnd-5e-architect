@@ -60,6 +60,11 @@ Ask directly: *"Are you building a world (for potential future campaigns) or run
    - Load existing world files
    - Review canon from readme and timeline
 
+6. **Output Format Preference**
+   - Ask: *"What output format would you like? Plain Markdown (works everywhere) or Homebrewery Markdown (styled PHB 2024 format for The Homebrewery)?"*
+   - If Homebrewery: Load [54-HOMEBREWERY-OUTPUT.md](54-HOMEBREWERY-OUTPUT.md) and apply its rules to all generated files
+   - Tag: `[OUTPUT FORMAT: Plain]` or `[OUTPUT FORMAT: Homebrewery]`
+
 **Output Structure:**
 - Save to `worlds/[world-name]/[world-name]-[type].md`
 - Create readme.md with world overview
@@ -120,6 +125,11 @@ Ask directly: *"Are you building a world (for potential future campaigns) or run
 9. **Campaign Format** — One-Shot / Short Arc / Full Campaign
 
 10. **Player Desire Profile** (if PCs exist)
+
+11. **Output Format Preference**
+    - Ask: *"What output format would you like? Plain Markdown (works everywhere) or Homebrewery Markdown (styled PHB 2024 format for The Homebrewery)?"*
+    - If Homebrewery: Load [54-HOMEBREWERY-OUTPUT.md](54-HOMEBREWERY-OUTPUT.md) and apply its rules to all generated files
+    - Tag: `[OUTPUT FORMAT: Plain]` or `[OUTPUT FORMAT: Homebrewery]`
 
 **Output Structure:**
 - World elements → `worlds/[world-name]/[world-name]-[type].md`
@@ -237,3 +247,4 @@ Tag the initialized state:
 - [22-LOCATION-GENERATION.md](22-LOCATION-GENERATION.md) — Layer 4 generation
 - [70-CAMPAIGN-FORMAT.md](70-CAMPAIGN-FORMAT.md) — Format-specific rules
 - [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) — Live session facilitation and session logs
+- [54-HOMEBREWERY-OUTPUT.md](54-HOMEBREWERY-OUTPUT.md) — Homebrewery Markdown syntax and formatting rules

@@ -42,6 +42,7 @@ When creating a campaign, gather:
 4. **Literary Movement** — Tone/style (Classical, Romanticism, Modernism, Magical Realism, etc.)
 5. **PC Status** — Pre-configured or Pending (added later)
 6. **Session Delivery Mode** — Pre-Planned Module or Live Session (asked after campaign setup)
+7. **Output Format Preference** — Plain Markdown or Homebrewery Markdown (asked once per world/campaign)
 
 ### Session Start Failsafe
 Before starting any session, verify `[campaign-name]-pcs.md` exists:
@@ -118,6 +119,7 @@ For deeper worldbuilding:
 - `rules/51-IMAGE-GENERATION.md` — Visual generation prompts
 - `rules/52-LIVE-SESSION-MANAGEMENT.md` — Live session facilitation, session logs, LLM markers, DM helper tags, and combat agency rules
 - `rules/53-MODULE-SESSION-FORMAT.md` — Pre-planned session module format (official D&D module style per-session files)
+- `rules/54-HOMEBREWERY-OUTPUT.md` — Homebrewery Markdown output format (PHB 2024 styled documents for The Homebrewery)
 
 ### Maintenance Files
 - `rules/60-AUDIT-PROTOCOLS.md` — Consistency audits
@@ -163,6 +165,13 @@ worlds/
 - Pattern: `[world-name]-[type].md`
 - Campaigns nest under world folder
 - Items file consolidates all weapons, armor, treasure, and magical items
+- When using Homebrewery format, files still use `.md` extension but contain Homebrewery syntax with metadata + CSS header
+
+**Output Format:**
+- **Plain Markdown** (default): Standard Markdown with headers, tables, blockquotes. Works in any editor.
+- **Homebrewery Markdown**: Styled for [The Homebrewery](https://homebrewery.naturalcrit.com/) with PHB 2024 theme. Includes `metadata` + `css` header blocks, `\page` breaks, `{{class}}` syntax, and the custom CSS from `references/homebrewery/phb-template.css`.
+- Ask the user which format they prefer before generating output. This choice persists per world/campaign.
+- Images are only included in Homebrewery output if `[campaign-name]/images/` (or `[world-name]/images/`) contains image files.
 
 ## Example Usage
 
@@ -205,7 +214,15 @@ worlds/
 - `rules/90-TAG-GLOSSARY.md` (tag reference for DM helper tags)
 - `rules/91-DM-TIPS-REFERENCE.md` (contextual DM guidance)
 
-### Example 5: Generate treasure hoard or custom magic item
+### Example 6: Generate Homebrewery-styled world document
+**Load:**
+- CORE files (rules/01-05)
+- `rules/54-HOMEBREWERY-OUTPUT.md` (Homebrewery syntax and formatting)
+- Element-specific rules as needed (e.g., `rules/20-NPC-GENERATION.md`)
+- Reference: `references/homebrewery/phb-template.css` (CSS to include verbatim)
+- Reference: `references/homebrewery/phb-template.md` (working example)
+
+### Example 7: Generate treasure hoard or custom magic item
 **Load:**
 - CORE files (rules/01-05)
 - `rules/26-ITEM-GENERATION.md` (item creation with mandatory value/effects)

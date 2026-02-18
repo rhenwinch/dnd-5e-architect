@@ -4,6 +4,25 @@
 
 ---
 
+## Output Format Preference
+
+Before generating any output files, **ask the user** which output format they prefer:
+
+> *"What output format would you like for your documents?"*
+>
+> **Option A — Plain Markdown:** Standard Markdown files with headers, tables, and blockquotes. Works everywhere — GitHub, Obsidian, any text editor.
+>
+> **Option B — Homebrewery Markdown:** Styled Markdown for [The Homebrewery](https://homebrewery.naturalcrit.com/) with PHB 2024 theme styling, page layouts, monster stat block frames, read-aloud boxes, and chapter headers. Paste directly into Homebrewery to render as a professional-looking D&D document.
+
+Tag: `[OUTPUT FORMAT: Plain]` or `[OUTPUT FORMAT: Homebrewery]`
+
+This question is asked **once** per world or campaign and persists unless the user explicitly changes it.
+
+- **If Plain Markdown:** Follow the rules in this file as-is.
+- **If Homebrewery Markdown:** Load [54-HOMEBREWERY-OUTPUT.md](54-HOMEBREWERY-OUTPUT.md) and follow its syntax rules. The CSS from `references/homebrewery/phb-template.css` must be included verbatim at the top of every generated file. Images are only included if `[campaign-name]/images/` (or `[world-name]/images/`) contains image files.
+
+---
+
 ## File Organization Structure
 
 ### Directory Structure
@@ -178,4 +197,5 @@ Full tag library for consistent worldbuilding documentation:
 ---
 
 **See also:**
+- [54-HOMEBREWERY-OUTPUT.md](54-HOMEBREWERY-OUTPUT.md) — Homebrewery Markdown syntax and formatting rules
 - [90-TAG-GLOSSARY.md](90-TAG-GLOSSARY.md) — Complete tag definitions and usage examples
