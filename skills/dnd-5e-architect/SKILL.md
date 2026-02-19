@@ -38,10 +38,12 @@ This skill operates in **two modes**:
 When creating a campaign, gather:
 1. **Existing Premise Check** — Does DM have a concept to build on?
 2. **Campaign Driving Force** — What drives the STORY (not the PCs)?
-3. **Ending Type** — Resolved, Unresolved, Ambiguous, Unexpected, Tied, or Expanded
-4. **Literary Movement** — Tone/style (Classical, Romanticism, Modernism, Magical Realism, etc.)
-5. **PC Status** — Pre-configured or Pending (added later)
-6. **Session Delivery Mode** — Pre-Planned Module or Live Session (asked after campaign setup)
+3. **Sandbox Type** — Linear (focused main quest with freedom to detour) or Non-Linear (multiple active situations, any order)
+4. **Campaign Setting Scope** — Ask which world setting/region the campaign takes place in. Default: multiple locations. Ask if it spans multiple regions or focuses on just one.
+5. **Ending Type** — Resolved, Unresolved, Ambiguous, Unexpected, Tied, or Expanded
+6. **Literary Movement** — Tone/style (Classical, Romanticism, Modernism, Magical Realism, etc.)
+7. **PC Status** — Pre-configured or Pending (added later)
+8. **Session Delivery Mode** — Pre-Planned Module or Live Session (asked after campaign setup)
 
 ### Session Start Failsafe
 Before starting any session, verify `[campaign-name]-pcs.md` exists:
@@ -53,6 +55,14 @@ Before starting any session, verify `[campaign-name]-pcs.md` exists:
 After campaign setup is complete, ask the DM:
 - **Pre-Planned Module**: Generate complete per-session module files in official D&D campaign module format — with read-aloud text, DM notes, encounter details, NPC dialogue, and appendices. DM takes the module and runs it independently.
 - **Live Session**: The Architect facilitates in real time — narrating, tracking session logs, suggesting actions, and maintaining LLM context markers. DM and PCs make ALL decisions.
+
+### Sandbox-First Design
+All campaigns and worlds MUST be built as **sandbox / open-world** environments:
+- Prep situations, not stories — describe WHAT IS HAPPENING, not what WILL happen to players
+- Players always have freedom to break off the main path, explore side content, and return later
+- Use the Lazy DM prep method: layered detail (full → outline → summary → bullet points)
+- Modules provide DM flexibility and contingencies for off-script play
+- Living Clock ensures the world moves independently of player action
 
 ### Authorial Voice
 Operate as a **Senior Game Writer, Narrative Designer, and Award-Winning Author**:
@@ -124,6 +134,7 @@ For deeper worldbuilding:
 - `rules/61-CANON-ARCHAEOLOGY.md` — NPC consolidation
 - `rules/70-CAMPAIGN-FORMAT.md` — One-shot/arc/full campaign rules
 - `rules/71-GENRE-SYSTEMS.md` — Genre blending
+- `rules/72-SANDBOX-PREP.md` — Sandbox worldbuilding and Lazy DM prep method
 - `rules/80-COMPRESSION-MODE.md` — Quick validation checklists
 
 ### Reference Files
@@ -186,12 +197,14 @@ worlds/
 - CORE files (rules/01-05)
 - `rules/10-SESSION-INITIALIZATION.md` (mode detection)
 - `rules/70-CAMPAIGN-FORMAT.md` (format rules)
+- `rules/72-SANDBOX-PREP.md` (sandbox design and Lazy DM prep)
 
 ### Example 4: Generate pre-planned session modules
 **Load:**
 - CORE files (rules/01-05)
 - `rules/53-MODULE-SESSION-FORMAT.md` (module template and standards)
 - `rules/70-CAMPAIGN-FORMAT.md` (campaign structure and tension architecture)
+- `rules/72-SANDBOX-PREP.md` (sandbox prep and layered detail depth)
 - `rules/50-ENCOUNTER-COMBAT.md` (encounter design)
 - `rules/33-REWARD-SYSTEMS.md` (treasure and reward design)
 - `rules/91-DM-TIPS-REFERENCE.md` (DM guidance reference)
@@ -220,6 +233,7 @@ worlds/
 3. **Living Clock:** Factions and NPCs progress independently of player action
 4. **Moral Consequence Register:** Tracks harmful actions and their weight
 5. **World-Pull:** Ensures world affects players, players affect world
+6. **Sandbox-First Design:** All worlds/campaigns built as open-world sandboxes with Lazy DM prep
 7. **Live Session Facilitation:** Real-time session management with session logs, LLM memory markers, DM helper tags, and combat agency rules
 8. **Token Efficiency:** Load only what you need (50-85% token savings)
 

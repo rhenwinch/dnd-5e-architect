@@ -100,26 +100,47 @@ Ask directly: *"Are you building a world (for potential future campaigns) or run
    - This is the thematic engine — what drives the STORY, not the PCs
    - Examples: "The collapse of an empire," "A war between gods," "The return of forgotten magic"
 
-5. **Ending Type**
+5. **Sandbox Type**
+   - Ask: *"Do you want this campaign to be linear or non-linear sandbox?"*
+   - Present both options with descriptions:
+     - **Linear:** A focused narrative path — the campaign follows a primary storyline with clear progression. Side content exists but the main thread is always visible. Best for time-limited campaigns or groups that prefer directed stories.
+     - **Non-Linear Sandbox:** An open-world design — multiple active situations exist simultaneously. The party can pursue side quests, explore freely, and return to the main thread when ready. The world moves forward whether or not the party engages with it. Best for groups that enjoy player-driven exploration and emergent stories.
+   - **Default:** Non-Linear Sandbox (if DM has no preference)
+   - This choice shapes prep depth, module structure, and how the Living Clock operates
+   - See [72-SANDBOX-PREP.md](72-SANDBOX-PREP.md) for full sandbox prep rules
+
+   Tag: `[SANDBOX TYPE: Linear/Non-Linear]`
+
+6. **Campaign Setting Scope**
+   - Ask: *"Where in the world will this campaign take place? Will it span multiple regions or focus on a single region?"*
+   - **Default:** Multiple locations across the world
+   - **Multiple Regions:** Campaign events, factions, and travel span two or more distinct regions. Prep regional summaries for each. Living Clock entries may differ by region.
+   - **Single Region:** Campaign is focused within one region — one city, one kingdom, one island, etc. Deeper local detail, fewer broad geography needs. Side quests and sandbox content are geographically concentrated.
+   - If the world already exists, present the available regions/settings for the DM to choose from
+   - This choice determines the geographic scope of module prep, travel events, and faction reach
+
+   Tag: `[SETTING SCOPE: Multiple Regions/Single Region — region(s): X]`
+
+7. **Ending Type**
    - Ask: *"What type of ending do you want for this campaign?"*
    - Options: Resolved (closed), Unresolved (cliffhanger), Ambiguous (open-ended), Unexpected (twist), Tied (full-circle), Expanded (epilogues)
 
-6. **Literary Movement**
+8. **Literary Movement**
    - Ask: *"What literary movement should influence this campaign's tone?"*
    - Present only movements that suit the world's texture
    - Options include: Classical, Medieval, Renaissance, Romanticism, Realism, Symbolism, Modernism, Existentialism, Magical Realism, Postmodernism, etc.
    - See [70-CAMPAIGN-FORMAT.md](70-CAMPAIGN-FORMAT.md) for full list with descriptions
 
-7. **Player Character Status**
+9. **Player Character Status**
    - Ask: *"Do you have pre-configured Player Characters for this campaign?"*
    - If YES: Gather identity information only (name, race, class, brief identity, campaign hook)
    - If NO: Campaign proceeds PC-independent; PCs can be added later via `[campaign-name]-pcs.md`
 
-8. **Player Count & Experience** (if PCs exist)
+10. **Player Count & Experience** (if PCs exist)
 
-9. **Campaign Format** — One-Shot / Short Arc / Full Campaign
+11. **Campaign Format** — One-Shot / Short Arc / Full Campaign
 
-10. **Player Desire Profile** (if PCs exist)
+12. **Player Desire Profile** (if PCs exist)
 
 **Output Structure:**
 - World elements → `worlds/[world-name]/[world-name]-[type].md`
@@ -236,4 +257,5 @@ Tag the initialized state:
 - [20-NPC-GENERATION.md](20-NPC-GENERATION.md) — Layer 3 generation
 - [22-LOCATION-GENERATION.md](22-LOCATION-GENERATION.md) — Layer 4 generation
 - [70-CAMPAIGN-FORMAT.md](70-CAMPAIGN-FORMAT.md) — Format-specific rules
+- [72-SANDBOX-PREP.md](72-SANDBOX-PREP.md) — Sandbox worldbuilding and Lazy DM prep
 - [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) — Live session facilitation and session logs

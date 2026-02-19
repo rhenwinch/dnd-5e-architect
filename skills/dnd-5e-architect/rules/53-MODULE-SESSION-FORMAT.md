@@ -431,6 +431,25 @@ Every encounter in a module MUST:
 - Provide **multiple resolution paths** — combat is never the only option
 - Note **time estimates** — how long this encounter typically takes to run
 
+### Sandbox Signal Language Standards
+
+Module prose MUST use **sandbox-compatible language** that presents situations, never scripts:
+
+**DO say:**
+- "The party might..." / "If the party chooses to..."
+- "This scene can occur at..." / "DM may place this encounter when..."
+- "Possible approaches include..." / "Players may decide to..."
+- "This situation is active whether or not the party engages with it."
+
+**DON'T say:**
+- "The party will..." / "The players then..."
+- "Next, the group goes to..." / "After this, they must..."
+- "The correct path is..." / "The party needs to..."
+
+**Portable Elements:** Every module should identify scenes, NPCs, and secrets that are **portable** — they work regardless of where the party goes or what approach they take. Portable elements can be relocated to wherever the party ends up.
+
+See [72-SANDBOX-PREP.md](72-SANDBOX-PREP.md) for the full Sandbox Signal Language reference.
+
 ### Treasure and Reward Standards
 
 Every treasure/reward MUST:
@@ -518,6 +537,10 @@ Before delivering, verify:
 - [ ] DM Complexity rating accurately reflects module demands
 - [ ] Handouts follow the Handout Generation Standard
 - [ ] "Previously On..." recap script bridges from last session
+- [ ] **Sandbox signal language used** — module presents situations, not scripts ("the party might..." not "the party will...")
+- [ ] **Portable elements identified** — scenes, NPCs, and secrets that work regardless of party approach
+- [ ] **Branching paths include sandbox options** — at least one path per Part allows the party to disengage and pursue other threads
+- [ ] **Prep depth matches layer** — immediate content is fully detailed, near-term content is sketched, distant content is bullet points
 
 Tag: `[MODULE AUDIT: session X — pass/fail — issues found]`
 
@@ -793,12 +816,7 @@ Tag: `[SESSION 0 MODULE: campaign setup — character creation — safety tools]
 **See also:**
 - [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) — Live session alternative
 - [70-CAMPAIGN-FORMAT.md](70-CAMPAIGN-FORMAT.md) — Campaign format systems and tension architecture
-- [50-ENCOUNTER-COMBAT.md](50-ENCOUNTER-COMBAT.md) — Encounter design rules
-- [04-CORE-OUTPUT-FORMAT.md](04-CORE-OUTPUT-FORMAT.md) — File naming and directory conventions
-- [33-REWARD-SYSTEMS.md](33-REWARD-SYSTEMS.md) — Reward and treasure design
-- [91-DM-TIPS-REFERENCE.md](91-DM-TIPS-REFERENCE.md) — DM guidance reference
-- [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) — Live session alternative
-- [70-CAMPAIGN-FORMAT.md](70-CAMPAIGN-FORMAT.md) — Campaign format systems and tension architecture
+- [72-SANDBOX-PREP.md](72-SANDBOX-PREP.md) — Sandbox worldbuilding and Lazy DM prep
 - [50-ENCOUNTER-COMBAT.md](50-ENCOUNTER-COMBAT.md) — Encounter design rules
 - [04-CORE-OUTPUT-FORMAT.md](04-CORE-OUTPUT-FORMAT.md) — File naming and directory conventions
 - [33-REWARD-SYSTEMS.md](33-REWARD-SYSTEMS.md) — Reward and treasure design

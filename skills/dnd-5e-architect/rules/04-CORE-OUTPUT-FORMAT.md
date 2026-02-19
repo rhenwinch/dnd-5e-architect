@@ -165,7 +165,14 @@ Full tag library for consistent worldbuilding documentation:
 `[BATTLEFIELD ACTION: Tell — X]`, `[BATTLEFIELD ACTION: Resolution — Y]`,
 `[BA NEUTRALIZE: condition X]`, `[BA MITIGATE: condition Y — reduced effect: Z]`,
 `[MODE: World Building]`, `[MODE: Campaign — World: world-name]`,
-`[OUTPUT PATH: worlds/world-name/FILE.md]`, `[OUTPUT PATH: worlds/world-name/campaigns/campaign-name/FILE.md]`
+`[OUTPUT PATH: worlds/world-name/FILE.md]`, `[OUTPUT PATH: worlds/world-name/campaigns/campaign-name/FILE.md]`,
+`[SANDBOX: open-world design — situations prepped, not stories]`,
+`[SANDBOX TYPE: Linear/Non-Linear]`,
+`[SETTING SCOPE: Multiple Regions/Single Region — region(s): X]`,
+`[LAZY DM PREP: steps completed — session X]`,
+`[PREP DEPTH: Layer 1/2/3/4 — session range]`,
+`[SANDBOX AUDIT: world/module — pass/fail — missing elements]`,
+`[SANDBOX FORMAT: One-Shot/Short-Arc/Full-Campaign — active situations: X]`
 
 ---
 
@@ -179,3 +186,4 @@ Full tag library for consistent worldbuilding documentation:
 
 **See also:**
 - [90-TAG-GLOSSARY.md](90-TAG-GLOSSARY.md) — Complete tag definitions and usage examples
+- [72-SANDBOX-PREP.md](72-SANDBOX-PREP.md) — Sandbox prep tags and layered depth model

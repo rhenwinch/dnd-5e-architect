@@ -51,7 +51,27 @@ When a DM requests a new campaign, gather the following parameters systematicall
 - Examples: "The collapse of an empire," "A prophecy coming true," "A war between gods," "The return of forgotten magic," "A plague spreading across the land"
 - This determines faction motivations, climactic events, and the world's central tension
 
-**3. Ending Type**
+**3. Sandbox Type**
+- Ask: *"Do you want this campaign to be linear or non-linear sandbox?"*
+- **Linear:** Focused narrative path — the campaign follows a primary storyline with clear progression. Side content exists but the main thread is always visible.
+- **Non-Linear Sandbox:** Open-world design — multiple active situations exist simultaneously. The party can pursue side quests, explore freely, and return to the main thread when ready. The world moves forward regardless of party engagement.
+- **Default:** Non-Linear Sandbox (if DM has no preference)
+- This choice shapes prep depth, module structure, and Living Clock behavior
+- See [72-SANDBOX-PREP.md](72-SANDBOX-PREP.md) for full sandbox prep rules
+
+Tag: `[SANDBOX TYPE: Linear/Non-Linear]`
+
+**4. Campaign Setting Scope**
+- Ask: *"Where in the world will this campaign take place? Will it span multiple regions or focus on a single region?"*
+- **Default:** Multiple locations across the world
+- **Multiple Regions:** Campaign events, factions, and travel span two or more distinct regions. Prep regional summaries for each. Living Clock entries may differ by region.
+- **Single Region:** Campaign is focused within one region — one city, one kingdom, one island, etc. Deeper local detail, fewer broad geography needs. Side quests and sandbox content are geographically concentrated.
+- If the world already exists, present the available regions/settings for the DM to choose from
+- This choice determines the geographic scope of module prep, travel events, and faction reach
+
+Tag: `[SETTING SCOPE: Multiple Regions/Single Region — region(s): X]`
+
+**5. Ending Type**
 - Ask: *"What type of ending do you want for this campaign?"*
 - Present these options with brief explanations:
   - **Resolved (Closed)**: All major threads conclude definitively. The story ends with closure.
@@ -63,7 +83,7 @@ When a DM requests a new campaign, gather the following parameters systematicall
 
 Tag: `[ENDING TYPE: Resolved/Unresolved/Ambiguous/Unexpected/Tied/Expanded]`
 
-**4. Literary Movement**
+**6. Literary Movement**
 - Ask: *"What literary movement should influence this campaign's tone and style?"*
 - Present ONLY movements that suit the world's texture (genre, setting, tone):
 
@@ -95,7 +115,7 @@ Tag: `[ENDING TYPE: Resolved/Unresolved/Ambiguous/Unexpected/Tied/Expanded]`
 
 Tag: `[LITERARY MOVEMENT: X]`
 
-**5. Player Character Independence**
+**7. Player Character Independence**
 - Ask: *"Do you have pre-configured Player Characters (PCs) for this campaign?"*
 - If YES: Gather **identity information only** (see PC File Format below)
 - If NO: Campaign proceeds PC-independent; PCs can be added later
@@ -412,6 +432,50 @@ If the answer is NO, you've built a railroad. Redesign the point to accommodate 
 Both are necessary. Visible Agency feels empowering. Hidden Agency feels like a living world.
 
 Tag: `[AGENCY ANCHOR: visible/hidden — consequence: X]`
+
+---
+
+## Sandbox-First Design
+
+All campaigns default to **sandbox/open-world design** unless the DM explicitly chooses linear. This is not optional — it is the foundational philosophy of world and campaign creation.
+
+> *"Prep situations, not stories. The story is what happens when players collide with situations."*
+
+### The Sandbox Mandate
+
+1. **World first, plot second.** Factions, NPCs, and locations have their own agendas. The main storyline is ONE thread among many, not THE thread.
+2. **Situations, not scripts.** Every prep element is a situation with active forces — never a predetermined sequence of events.
+3. **The world moves.** The Living Clock, faction goals, and NPC trajectories advance whether or not the party engages with them.
+4. **Player choice is load-bearing.** The party decides what to engage with, when, and how. Campaign structure adapts to their choices.
+
+### Layered Prep Depth
+
+Prep detail scales by proximity to the current session:
+
+| Layer | Scope | Prep Depth | Example |
+|---|---|---|---|
+| **Layer 1 — Immediate** | This session + next session | Full descriptions, NPC dialogue, tactical maps, read-aloud text | The dungeon they're entering tonight |
+| **Layer 2 — Near-Term** | 2-4 sessions out | Basic descriptions, key NPCs sketched, major decision points outlined | The city they'll reach after the dungeon |
+| **Layer 3 — Mid-Term** | 5-10 sessions out | General summary, faction movements, broad situation descriptions | The war brewing in the northern kingdom |
+| **Layer 4 — Guiding Stars** | Campaign-spanning | Bullet points, thematic notes, major endgame possibilities | The lich's ultimate plan, the prophecy's resolution |
+
+**The Lazy DM Principle:** If you're prepping detail that won't matter for 5+ sessions, you're over-preparing. The world will change before you get there.
+
+### After Each Session: Lazy DM Refresh
+
+After each session, follow this 5-minute reassessment:
+1. **Review characters** — What do PCs care about now? What surprised you?
+2. **Create a strong start** — What's the opening scene of next session?
+3. **Outline potential scenes** — What situations might the party encounter?
+4. **Define secrets and clues** — What hidden information exists? Multiple discovery paths?
+5. **Develop key NPCs** — Who will the party likely interact with?
+6. **Develop key locations** — Where might the party go?
+7. **Outline treasure** — What rewards exist and how do they connect to the story?
+8. **Choose a relevant monster** — What antagonistic forces are active?
+
+See [72-SANDBOX-PREP.md](72-SANDBOX-PREP.md) for complete sandbox prep rules, signal language, and format-specific guidelines.
+
+Tag: `[SANDBOX: open-world design — situations prepped, not stories]`
 
 ---
 
@@ -1068,3 +1132,4 @@ Tag: `[SESSION ZERO LENGTH: scales with campaign format]`
 - [31-TEMPORAL-SYSTEMS.md](31-TEMPORAL-SYSTEMS.md) — Living Clock pacing
 - [20-NPC-GENERATION.md](20-NPC-GENERATION.md) — NPC depth tiers
 - [21-FACTION-GENERATION.md](21-FACTION-GENERATION.md) — Faction complexity
+- [72-SANDBOX-PREP.md](72-SANDBOX-PREP.md) — Sandbox worldbuilding and Lazy DM prep
