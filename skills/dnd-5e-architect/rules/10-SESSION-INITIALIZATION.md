@@ -179,12 +179,12 @@ Tag: `[SESSION START: PC file verified/created]`
 
 Ask: *"How would you like to run this campaign?"*
 
-- **Option A — Pre-Planned Module:** Generate complete session outlines, encounter details, and narrative beats the DM takes and runs at their table.
+- **Option A — Pre-Planned Module:** Generate a modular adventure — a collection of standalone quest/situation modules (like *Dragon of Icespire Peak*) plus a Campaign Guide with a quest board. Each quest module is self-contained and order-independent. The DM picks which module to run based on player choices.
 - **Option B — Live Session:** Run the session here with The Architect as facilitator. The Architect narrates, tracks events, suggests actions, and maintains session logs. DM and PCs make ALL decisions.
 
 Tag: `[SESSION MODE: Module/Live]`
 
-**If Module:** Load [53-MODULE-SESSION-FORMAT.md](53-MODULE-SESSION-FORMAT.md) and generate per-session module files following the official D&D module standard. Each session produces a standalone markdown module the DM can run at their table.
+**If Module:** Load [53-MODULE-SESSION-FORMAT.md](53-MODULE-SESSION-FORMAT.md) and generate quest modules following the Quest Board Model. Generate a Campaign Guide (`[campaign-name]-guide.md`) and individual quest modules (`[campaign-name]-quest-[quest-name].md`) the DM can run in any order.
 **If Live:** Load [52-LIVE-SESSION-MANAGEMENT.md](52-LIVE-SESSION-MANAGEMENT.md) and activate the Live Session Protocol.
 
 **Important:** This question must be asked ONCE per campaign. The choice persists across sessions unless the DM explicitly changes it.

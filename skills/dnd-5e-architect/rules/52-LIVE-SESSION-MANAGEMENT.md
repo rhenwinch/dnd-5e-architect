@@ -20,7 +20,7 @@ Ask the DM:
 
 Tag: `[SESSION MODE: Module/Live]`
 
-**If Module:** Load [53-MODULE-SESSION-FORMAT.md](53-MODULE-SESSION-FORMAT.md) and generate per-session module files following the official D&D module standard.
+**If Module:** Load [53-MODULE-SESSION-FORMAT.md](53-MODULE-SESSION-FORMAT.md) and generate quest modules following the Quest Board Model (Campaign Guide + standalone quest modules).
 **If Live:** Activate the Live Session Protocol below.
 
 ---

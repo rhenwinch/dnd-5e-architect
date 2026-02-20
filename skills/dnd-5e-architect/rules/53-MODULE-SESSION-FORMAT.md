@@ -1,4 +1,4 @@
-# 📖 PRE-PLANNED SESSION MODULE FORMAT
+# 📖 PRE-PLANNED MODULE FORMAT
 
 **[LOAD PRIORITY: CONDITIONAL — Load when DM chooses Pre-Planned Module mode for session delivery]**
 
@@ -6,17 +6,65 @@
 
 ## Purpose
 
-When the DM chooses **Pre-Planned Module** mode, The Architect generates a **standalone session module** for each session — a markdown file that reads like an official D&D campaign module (e.g., *Curse of Strahd*, *Storm King's Thunder*, *Tomb of Annihilation*).
+When the DM chooses **Pre-Planned Module** mode, The Architect generates a **modular adventure** — a collection of standalone quest and situation modules the DM can run in any order based on player choices.
 
-Each module is a **complete, self-contained document** the DM can print, read on a tablet, or reference at the table. It contains everything the DM needs to run that session without needing to consult other files during play.
+> **This is NOT a session-by-session script.** It is a toolkit of prepared situations, quests, locations, and encounters — like *Dragon of Icespire Peak* — where ALL possibilities are planned and written, and the DM selects what to run based on what the players choose to do.
 
-Tag: `[SESSION MODULE: session number — title]`
+Tag: `[QUEST MODULE: quest name — tier/level range]`
+
+---
+
+## The Players' Story Doctrine
+
+> **What you prep might NOT be what the players will do. It is THEIR story, not yours.**
+
+This is the single most important rule of module generation. Every module, every quest, every situation exists as a **possibility** — not a mandate. The players decide which situations to engage with, in what order, and by what approach.
+
+### The Anti-Linear Mandate
+
+1. **Modules are situations, not sessions.** A module describes WHAT IS HAPPENING in a location or with a faction — not what happens on a specific night of play. The DM runs whichever module fits what the players chose to do.
+2. **No predetermined sequence.** Module A does not "lead to" Module B unless there is a justified prerequisite (see When Railroading is Justified). The party might do Module C first, skip Module A entirely, and invent Module F that you never wrote.
+3. **Session numbers are DM bookkeeping, not module identity.** The DM might run the "Gnoll Warren" quest module on session 3, session 7, or never. It doesn't matter. The module is ready whenever the players go there.
+4. **Prep the world, let the players write the story.** The campaign's driving force creates urgency. The Living Clock creates consequences. But the PLAYERS decide how they engage with both.
+
+### What This Means in Practice
+
+- **BAD:** Generating `session-01-module.md` → `session-02-module.md` → `session-03-module.md` with session 2 assuming session 1's outcomes
+- **GOOD:** Generating `quest-tower-of-storms.md`, `quest-gnoll-warren.md`, `quest-merchants-plea.md` — any of which the party might pursue on any session night
+- **BAD:** "After the party defeats the bandits, they learn about the missing caravan" (assumes sequence)
+- **GOOD:** "The missing caravan is a known situation. The party can learn about it from multiple sources: the job board, tavern rumors, the merchant NPC, or encountering the wreckage during travel."
+
+---
+
+## When Railroading Is Justified
+
+Railroading — directing players toward specific content — is PROHIBITED by default. However, there are narrow, mechanically justified exceptions where **soft gates** or **prerequisites** are appropriate:
+
+### Justified Prerequisites
+
+| Gate Type | When It's Justified | Example | How to Signal |
+|---|---|---|---|
+| **CR / Level Gate** | Encounter would be lethal for underleveled PCs | "The ancient dragon's lair is designed for level 10+ parties" | Mark in quest header: `**Recommended Level:** 10+`. Include a warning encounter or NPC that signals danger. |
+| **Item / Key Requirement** | A specific object is needed to access a location | "The Vault of Whispers requires the Sunstone Key" | List the prerequisite in the quest header. Ensure the required item is obtainable from 2+ different quests. |
+| **Knowledge Gate** | Players need specific information to understand a situation | "The ritual's meaning is unknown without translating the glyphs" | Make the knowledge discoverable through multiple paths (portable secrets). |
+| **Story Prerequisite** | A prior event must logically have occurred | "The rebel faction only forms AFTER the king's decree" | Use Living Clock to trigger the situation at the right world-state. |
+| **Safety Gate** | Content requires table consent (horror, sensitive themes) | "This quest involves body horror elements" | Flag in quest header with content warning. |
+
+### Rules for Prerequisites
+
+1. **Minimize them.** Most quests should have ZERO prerequisites. A player should be able to walk into most situations cold.
+2. **Never single-source a prerequisite.** If quest B requires information from quest A, that same information MUST also be available from at least one other source (a different NPC, location, or faction path).
+3. **Signal danger, don't block access.** For CR gates, don't lock the door — post warning signs. Let players flee. An NPC who says *"No one who enters the Ash Mines below level 8 comes back alive"* is a signal. A locked door that requires level 8 is a railroad.
+4. **Mark prerequisites clearly.** Every quest module header lists prerequisites (if any) so the DM can see at a glance what's accessible.
+
+Tag: `[PREREQUISITE: type — requirement — alternative paths: X]`
+Tag: `[RAILROAD JUSTIFIED: reason — gate type]`
 
 ---
 
 ## The Module Standard
 
-> **Every session module must be indistinguishable in quality and structure from a professionally published D&D adventure module. If a DM handed this to a player, they should believe it came from Wizards of the Coast.**
+> **Every quest module must be indistinguishable in quality and structure from a professionally published D&D adventure module. If a DM handed this to a player, they should believe it came from Wizards of the Coast.**
 
 ### What This Means
 
@@ -26,98 +74,146 @@ Tag: `[SESSION MODULE: session number — title]`
 - **NPC dialogue** — key lines of dialogue and personality cues, not just "NPC talks to party."
 - **Maps and area descriptions** — detailed room/area descriptions with sensory details (sight, sound, smell, temperature).
 - **Rewards and consequences** — clearly stated outcomes for success, failure, and creative solutions.
+- **Self-contained** — each module contains everything the DM needs. No consulting other files during play.
+- **Order-independent** — modules work regardless of what the party has done before (unless a justified prerequisite exists).
+
+---
+
+## Module Architecture: The Quest Board Model
+
+Campaign modules follow the **Quest Board Model** (inspired by *Dragon of Icespire Peak*). Instead of a linear chain of session-numbered files, The Architect generates:
+
+### 1. Campaign Guide (`[campaign-name]-guide.md`)
+The master document for the DM. Contains:
+- Campaign overview, driving force, and premise
+- **Quest Board** — a table of all available quest modules with names, level ranges, prerequisites, brief descriptions, and current status (available / locked / completed)
+- Faction overview and Living Clock stages
+- Regional map / location index
+- PC hooks and connections
+- Campaign-wide DM notes and contingencies
+
+### 2. Quest Modules (`[campaign-name]-quest-[quest-name].md`)
+Standalone adventure modules, each describing **one situation, quest, or location**. The DM pulls the relevant quest module when the players choose to engage with that content.
+
+### 3. Session Log (`[campaign-name]-session-log.md`)
+After each session, the DM (or Architect) records what actually happened — which modules were used, what players did, what consequences were generated. Session numbers live HERE, not in the modules themselves.
 
 ---
 
 ## Module File Naming
 
-**File:** `[campaign-name]-session-[number]-module.md`
+### Quest Modules
+**File:** `[campaign-name]-quest-[quest-name].md`
 
 **Location:** `worlds/[world-name]/campaigns/[campaign-name]/`
 
 **Examples:**
-- `shadow-crown-session-01-module.md`
-- `shadow-crown-session-02-module.md`
-- `broken-gods-session-05-module.md`
+- `shadow-crown-quest-tower-of-storms.md`
+- `shadow-crown-quest-gnoll-warren.md`
+- `shadow-crown-quest-merchants-plea.md`
+- `shadow-crown-quest-the-sunken-temple.md`
+- `broken-gods-quest-fallen-sanctum.md`
+
+### Campaign Guide
+**File:** `[campaign-name]-guide.md`
+
+**Examples:**
+- `shadow-crown-guide.md`
+- `broken-gods-guide.md`
 
 ---
 
-## Module Template Structure
+## Quest Module Template Structure
 
-Every session module MUST follow this structure. Sections marked with ★ are mandatory. Sections marked with ◆ are included when relevant.
+Every quest module MUST follow this structure. Sections marked with ★ are mandatory. Sections marked with ◆ are included when relevant.
 
 ```markdown
-# [Campaign Name] — Session [Number]: [Session Title]
+# [Campaign Name] — Quest: [Quest Title]
 
 **Campaign:** [Campaign Name]
-**Session:** [Number] of [Total Planned]
-**Estimated Duration:** [3-4 hours / 2-3 hours / etc.]
-**Tier:** [1-4] | **Average Party Level:** [X]
+**Quest Type:** [Main Quest / Side Quest / Faction Quest / Exploration / Event]
+**Recommended Level:** [X-Y] | **Tier:** [1-4]
+**Estimated Duration:** [1-2 sessions / single session / half-session]
 **DM Complexity:** [★☆☆☆☆ to ★★★★★] — [Brief justification]
+**Prerequisites:** [None / List specific requirements with alternative paths]
+**Location:** [Where this quest takes place]
 **Themes:** [2-3 thematic keywords]
 **Tone:** [Primary tone from eight-tone palette]
-**Previously:** [1-2 sentence recap of last session's ending]
+**Driving Force Connection:** [How this quest connects to the campaign's central tension]
+**Status:** [Available / Locked (prerequisite) / Triggered (by Living Clock)]
 
 ---
 
-## ★ Adventure Synopsis
+## ★ Quest Overview
 
-[2-3 paragraph overview of what happens in this session. Written for the DM's
-eyes only. Summarizes the beginning, middle, and end of the session's narrative
-arc. Includes the session's dramatic question — the central tension the PCs
-must resolve.]
+[2-3 paragraph overview of the situation. Written for the DM's eyes only.
+Describes WHAT IS HAPPENING — the active situation, the forces involved,
+and what's at stake. Does NOT assume when or in what order the party
+arrives. Includes the quest's dramatic question.]
 
-**Dramatic Question:** [The central question this session answers]
-**Session Arc:** [Setup → Confrontation → Resolution summary]
+**The Situation:** [1-2 sentence summary of the active situation]
+**Dramatic Question:** [The central question this quest answers]
+**Discovery Hooks:** [How the party can learn about this quest — list 3+
+sources: quest board, NPC rumor, faction request, travel encounter,
+personal hook, world event, etc.]
 
-### Previously On...
-
-> *[Read-aloud recap script the DM reads at the top of the session.
-> Written in third person past tense, 4-6 sentences. Covers the key
-> events, decisions, and unresolved tensions from the previous session.
-> Designed to rebuild narrative momentum for groups that play
-> biweekly or monthly. Tone matches the campaign's literary movement.]*
+> **💡 DM TIP:** [When to introduce this quest. What signals suggest
+> the party is ready for it. How to seed it naturally.]
 
 ---
 
-## ★ Session Opening
+## ★ Quest Opening
 
-### Read-Aloud Text
+### Read-Aloud Text: Arrival
 
-> *[Atmospheric boxed text the DM reads aloud when the session begins.
-> Sets the scene, establishes mood, and grounds the PCs in the world.
-> Written in second person present tense. 3-5 sentences.]*
+> *[Atmospheric boxed text the DM reads when the party arrives at the
+> quest location or first encounters the situation. Written in second
+> person present tense. 3-5 sentences. Does NOT assume how or why
+> the party is here.]*
 
 ### Scene Setup
 - **Location:** [Where the PCs are]
-- **Time:** [When — morning, evening, etc.]
+- **Time:** [Flexible — adapt to when the party arrives]
 - **Weather/Atmosphere:** [Environmental conditions]
 - **Immediate Situation:** [What the PCs see/hear/feel right now]
+- **What Has Changed:** [If the Living Clock has advanced, note what's
+  different from the default state described above]
 
-### DM Notes: Opening the Session
-> **💡 DM TIP:** [Guidance on how to set the tone, what to emphasize,
-> and how to transition from last session's cliffhanger if applicable.]
+> **💡 DM TIP:** [How to adapt this opening based on the party's
+> approach — did they come seeking this quest, stumble into it, or
+> arrive from an unexpected direction?]
 
 ---
 
-## ★ Part 1: [Act 1 Title — Setup/Hook]
+## ★ Situations and Scenes
 
-[Narrative description of this act's purpose and flow. 1-2 paragraphs.]
+[Quest modules contain SITUATIONS — active forces and events happening
+in this location/quest. They are NOT ordered acts. The DM uses whichever
+scenes are relevant based on what the players do.]
 
-### Scene [X]: [Scene Title]
+### Situation: [Situation Title]
 
-#### Read-Aloud Text
+[Narrative description of this situation — what is happening, who is
+involved, and what the active forces are. 1-2 paragraphs. Describes
+the CURRENT STATE, not a scripted sequence.]
+
+#### Scene [X]: [Scene Title]
+
+##### Read-Aloud Text
 
 > *[Boxed text for this scene. Atmospheric, sensory-rich prose.]*
 
-#### Scene Details
+##### Scene Details
 - **Purpose:** [Why this scene exists — what it advances]
+- **Trigger:** [What causes this scene to occur — player arrival, NPC action,
+  time passing, player choice, or always active]
 - **Key NPCs Present:** [Names with brief reminder of who they are]
 - **Key Information Available:** [What PCs can learn here]
 - **Mood:** [The emotional tone of this scene]
-- **Suggested Ambiance:** [Music/sound cue — e.g., "low strings with distant thunder," "tavern bustle and lute," "dead silence with occasional dripping"]
+- **Portable:** [Yes/No — can this scene be relocated if players go elsewhere?]
+- **Suggested Ambiance:** [Music/sound cue]
 
-#### NPC Roleplay Guide
+##### NPC Roleplay Guide
 
 **[NPC Name]** — [Race, role, 1-line personality]
 - **Motivation:** [What they want RIGHT NOW]
@@ -127,25 +223,29 @@ must resolve.]
   - *"[Response to likely PC question]"*
   - *"[Fallback line if conversation stalls]"*
 - **Secret:** [What they're hiding, if anything]
+- **Portable:** [Can this NPC appear elsewhere if the party doesn't come here?]
 - **Stat Reference:** [Book/page or custom stat block reference]
 
 > **💡 DM TIP:** [How to play this NPC, what to do if PCs are
 > suspicious, aggressive, or try to skip this interaction.]
 
-#### Skill Challenges / Checks
+##### Skill Challenges / Checks
 
 | Check | DC | Success | Failure |
 |---|---|---|---|
 | [Skill] | [DC] | [What happens] | [What happens] |
 
-#### Branching Paths
+##### Player Approaches
 
-If PCs choose to [action A]: → Go to **Scene [X]**
-If PCs choose to [action B]: → Go to **Scene [Y]**
-If PCs do something unexpected: → See **DM Contingency** below
+The party may approach this situation in multiple ways:
+- If PCs choose [approach A]: → [What happens — reference Scene X if relevant]
+- If PCs choose [approach B]: → [What happens — reference Scene Y if relevant]
+- If PCs avoid this entirely: → [What happens in the world — Living Clock advances]
+- If PCs do something unexpected: → See **DM Contingency** in Appendices
 
-> **💡 DM TIP:** [How to handle the most likely "off-script" player
-> action here. Redirect without railroading.]
+> **💡 DM TIP:** [The players' choices matter more than your prep.
+> If they find a creative solution not listed here, reward it.
+> Never funnel them back to your planned path.]
 
 ### ◆ Rest Opportunity
 
@@ -160,19 +260,14 @@ effects, or no penalty if rest is optional]
 
 ---
 
-## ★ Part 2: [Act 2 Title — Confrontation/Development]
-
-[Narrative description of the rising action. 1-2 paragraphs.]
-
-### Scene [X]: [Scene Title]
-
-[Follow same Scene structure as Part 1]
+## ◆ Exploration Areas
 
 ### ◆ Exploration Area: [Area Name]
 
 #### Area Overview
 [General description of the area — what it looks like, feels like,
-and why it matters to the story.]
+and why it matters. This area exists in the world whether or not
+the party visits it.]
 
 #### Keyed Locations
 
@@ -251,54 +346,59 @@ or mechanical penalty]
 
 ---
 
-## ★ Part 3: [Act 3 Title — Climax/Resolution]
+## ★ Quest Climax
 
-[Narrative description of the climax and resolution. 1-2 paragraphs.]
+[Description of the dramatic high point of this quest — what makes
+this moment matter, what's at stake. This is the natural culmination
+of the situation, NOT a scripted Act 3. It triggers when the players
+have engaged with the situation deeply enough.]
 
-### Scene [X]: [Scene Title]
-
-[Follow same Scene structure as Parts 1-2]
-
-### ★ Session Climax
-
-[Description of the dramatic high point. What makes this moment
-matter. What's at stake.]
+### Trigger Conditions
+[What circumstances bring the quest to its climax — player actions,
+time passing, faction moves, or NPC escalation]
 
 #### Possible Outcomes
 - **Victory/Success:** [What happens if PCs succeed — narrative and mechanical]
 - **Partial Success:** [What happens if PCs partially succeed]
 - **Failure:** [What happens if PCs fail — consequences, not game-over]
 - **Creative Solution:** [Reward for unexpected clever solutions]
+- **Abandoned / Ignored:** [What happens in the world if the party
+  never engages with this quest — Living Clock consequences]
 
 > **💡 DM TIP:** [How to make the climax feel earned. What emotional
-> beats to hit. Pacing advice for the final moments.]
+> beats to hit. Remember: this might happen in session 2 or session
+> 12 — it doesn't matter. The payoff comes from the situation, not
+> the calendar.]
 
 ---
 
-## ★ Session Wrap-Up
+## ★ Quest Resolution and Consequences
 
-### Resolution
-[What happens after the climax. Immediate aftermath. 1-2 paragraphs.]
-
-### Read-Aloud: Session Ending
-
-> *[Final atmospheric text. Ends on a note that matches the session's
-> tone. If a cliffhanger, ends mid-tension. 3-5 sentences.]*
+### Outcomes
+[What happens after the climax. How the world changes based on
+the result. 1-2 paragraphs per major outcome path.]
 
 ### Consequences Generated
-| Decision/Event | Immediate Consequence | Future Consequence |
-|---|---|---|
-| [What happened] | [What changes now] | [What will matter later] |
+| Decision/Event | Immediate Consequence | Future Consequence | Affects Which Quests |
+|---|---|---|---|
+| [What happened] | [What changes now] | [What will matter later] | [Other quest modules affected] |
 
-### ★ Cliffhanger / Next Session Hook
+### Connections to Other Quests
+[How this quest's completion (or failure) affects the availability,
+difficulty, or nature of other quest modules in the campaign.
+List specific cross-references.]
 
-**Hook Type:** [Mystery Box / Betrayal Echo / Ticking Clock / World Shift / Personal Stakes / Impossible Choice / Promise of Spectacle]
+### Rewards
+| Item | Type | Value | Story Connection | How Earned |
+|---|---|---|---|---|
+| [Name] | [Type] | [GP value] | [Why it matters] | [Which outcome] |
 
-**The Hook:** [1-2 sentences describing the unresolved tension that
-pulls PCs into the next session]
+**Experience / Milestones:**
+- [XP awards or milestone progression for this quest]
 
-> **💡 DM TIP:** [How to deliver the cliffhanger for maximum impact.
-> Should it be narrated, revealed through an NPC, or discovered?]
+> **💡 DM TIP:** [What threads this resolution opens. What new
+> situations emerge from the outcome. How to hook the party into
+> their next chosen quest.]
 
 ---
 
@@ -313,7 +413,7 @@ pulls PCs into the next session]
 ### Appendix B: Stat Blocks
 
 [Full stat blocks for any custom creatures or modified NPCs used
-in this session. Use standard D&D 5e stat block format.]
+in this quest. Use standard D&D 5e stat block format.]
 
 ### ◆ Appendix C: Handouts and Player Information
 
@@ -354,7 +454,7 @@ and area maps for exploration.]
 | [Name] | [Weapon/Armor/Consumable/etc.] | [GP value] | [Why it matters] | [Location] |
 
 **Experience / Milestones:**
-- [XP awards or milestone progression for this session]
+- [XP awards or milestone progression for this quest]
 
 ### ◆ Appendix F: Faction Clock Updates
 
@@ -365,25 +465,26 @@ and area maps for exploration.]
 ### Appendix G: DM Contingency Plans
 
 **If PCs skip [location/NPC]:**
-[How to deliver critical information another way]
+[How to deliver critical information another way — portable secrets]
 
 **If PCs go completely off-script:**
-[Emergency redirect — what happens in the world regardless]
+[What happens in the world regardless of PC involvement — Living Clock consequences]
 
-**If session runs long:**
-[What to cut — prioritized list of skippable content]
+**If quest runs long (multi-session):**
+[Natural break points where the DM can pause and resume next session]
 
-**If session runs short:**
-[Additional content to extend — optional encounters or roleplay scenes]
+**If quest resolves quickly:**
+[Additional content to extend — optional exploration, NPC scenes, or related hooks]
 
 ### ◆ Appendix H: Cross-References
 
+- **Campaign Guide:** See `[campaign-name]-guide.md` for quest board and campaign overview
 - **Canon File:** See `[campaign-name]-canon.md` for world state
 - **Plot Web:** See `[campaign-name]-plot-web.md` for connection map
 - **NPC Details:** See `[world-name]-npcs.md` for full NPC profiles
 - **Faction Details:** See `[world-name]-factions.md` for faction info
-- **Previous Session:** `[campaign-name]-session-[N-1]-module.md`
-- **Next Session:** `[campaign-name]-session-[N+1]-module.md`
+- **Related Quests:** `[campaign-name]-quest-[related-quest-name].md` — [how they connect]
+- **Session Log:** See `[campaign-name]-session-log.md` for play history
 ```
 
 ---
@@ -462,64 +563,82 @@ Every treasure/reward MUST:
 
 ## Module Scope by Campaign Format
 
-### One-Shot Module
-- **Sessions:** 1 module total
+### One-Shot (Single Quest Module)
+- **Quests:** 1 self-contained quest module + minimal Campaign Guide
 - **Length:** 15-25 pages
 - **Encounters:** 2-4
 - **NPCs:** 3-5 with dialogue
 - **Maps:** 1-2 areas
 - **Appendices:** A, B, E, G (minimal)
+- **Notes:** No quest board needed — the module IS the adventure
 
-### Short Arc Modules
-- **Sessions:** 3-8 modules
+### Short Arc (3-8 Quest Modules)
+- **Quests:** 3-8 quest modules + Campaign Guide with quest board
 - **Length per module:** 10-18 pages
 - **Encounters per module:** 1-3
 - **NPCs per module:** 3-6 with dialogue
 - **Maps:** 1-3 areas per module
-- **Appendices:** A-H (full set for later sessions)
-- **Session 1 module** includes extra worldbuilding setup
-- **Final session module** includes epilogue section
+- **Appendices:** A-H (full set for complex quests)
+- **Campaign Guide** includes quest board with 5-10 quests (not all need full modules — some are sketches for DM improvisation or future development)
+- **Quest availability:** Most quests available from the start; 1-2 may have justified prerequisites
 
-### Full Campaign Modules
-- **Sessions:** 10+ modules
+### Full Campaign (10+ Quest Modules)
+- **Quests:** 10+ quest modules + comprehensive Campaign Guide
 - **Length per module:** 12-20 pages
 - **Encounters per module:** 2-4
 - **NPCs per module:** 4-8 with dialogue
 - **Maps:** 2-4 areas per module
-- **Appendices:** A-H (full set every session)
-- **Tier transitions** (Sessions 5, 12, 20) include world-state summaries
-- **Every 5th module** includes a Faction Clock summary appendix
+- **Appendices:** A-H (full set for every module)
+- **Campaign Guide** includes tiered quest board (Tier 1 quests available first, Tier 2-4 unlock as the world state evolves)
+- **Every 5 quest modules** — include a Faction Clock summary in the Campaign Guide update
+- **Tier transitions** include world-state summaries in the Campaign Guide
+- **Quest pool management:** DM always has 3-5 quest modules ready; Architect generates new ones as the pool depletes or the world state creates new situations
 
 ---
 
 ## Module Generation Workflow
 
-### Step 1: Session Planning
-Before writing the module, determine:
-1. Where does this session fall in the campaign arc? (Act 1/2/3, Tier 1-4)
-2. What is the dramatic question for this session?
-3. What tension architecture applies? (Rising, Peak, Valley, Plateau)
-4. What "Oh Shit" moments are planted or paid off?
-5. What tonal palette is this session? (Heroic, Tense, Mysterious, etc.)
-6. What hooks carry over from last session?
-7. What faction clocks advance during this session?
+### Step 1: Campaign / Quest Board Planning
+Before writing quest modules, establish:
+1. What is the campaign's driving force and central tension?
+2. What situations, locations, factions, and threats exist in the world?
+3. What quests emerge naturally from these elements? (List 5-15 quest concepts)
+4. Which quests are immediately available vs. gated by prerequisites?
+5. What tier/level range suits each quest?
+6. How do the quests connect to each other (shared NPCs, locations, factions)?
+7. What Living Clock stages affect quest availability or urgency?
 
-Tag: `[MODULE PLANNING: session X — dramatic question — tension level]`
+**Output:** Campaign Guide with quest board.
 
-### Step 2: Outline Draft
-Write a 1-page outline:
-- Opening scene and hook
-- 3-act structure with scene list
-- Key encounters (type, difficulty, purpose)
-- Climax description
-- Cliffhanger/hook for next session
-- Estimated timing for each section
+Tag: `[MODULE PLANNING: campaign name — quest board — quest count]`
+
+### Step 2: Quest Design
+For each quest module, determine:
+1. What is the active situation? (What is happening RIGHT NOW, whether or not the party gets involved?)
+2. What is the dramatic question?
+3. Who are the key forces in conflict?
+4. What approaches can the party take? (Combat, stealth, diplomacy, avoidance)
+5. What happens if the party NEVER engages? (Living Clock consequence)
+6. What discovery hooks lead the party here? (List 3+ sources)
+7. What makes this quest order-independent? (Or, if it has prerequisites, what justifies the gate?)
 
 ### Step 3: Full Module Draft
-Write the complete module following the template structure above.
+Write the complete quest module following the template structure above. Verify:
+- The module works as a standalone adventure
+- No assumptions about prior or future sessions
+- Multiple entry points and approaches exist
+- Discovery hooks provide 3+ ways to learn about this quest
+- Portable elements (scenes, NPCs, secrets) are marked
 
 ### Step 4: Module Audit
 Before delivering, verify:
+- [ ] **Order-independence check** — this module works regardless of which quests came before it
+- [ ] **No session-number assumptions** — no references to "session 1" or "last session" in the module body
+- [ ] **Discovery hooks present** — at least 3 ways the party can learn about this quest
+- [ ] **Prerequisite minimization** — this quest has zero prerequisites, or prerequisites are justified and multi-sourced
+- [ ] **Portable elements identified** — scenes, NPCs, and secrets that work regardless of party approach
+- [ ] **"If avoided" path exists** — the module describes what happens if the party never engages (Living Clock)
+- [ ] **Player approach variety** — at least 3 different approaches the party can take, including creative/unexpected
 - [ ] Every encounter passes the Connection Test
 - [ ] Read-aloud text uses second person, present tense
 - [ ] No PC actions are assumed or dictated
@@ -528,49 +647,55 @@ Before delivering, verify:
 - [ ] Treasure has story connections
 - [ ] Scaling notes provided for encounters
 - [ ] Timing estimates are realistic
-- [ ] Cliffhanger/hook is compelling
-- [ ] Cross-references to other campaign files are correct
+- [ ] Cross-references to Campaign Guide and related quests are correct
 - [ ] Faction clock updates are tracked
-- [ ] Consequences from previous sessions are reflected
-- [ ] Rest opportunities are placed appropriately between encounters
+- [ ] Rest opportunities are placed appropriately
 - [ ] Ambiance suggestions included for key scenes
 - [ ] DM Complexity rating accurately reflects module demands
 - [ ] Handouts follow the Handout Generation Standard
-- [ ] "Previously On..." recap script bridges from last session
 - [ ] **Sandbox signal language used** — module presents situations, not scripts ("the party might..." not "the party will...")
-- [ ] **Portable elements identified** — scenes, NPCs, and secrets that work regardless of party approach
-- [ ] **Branching paths include sandbox options** — at least one path per Part allows the party to disengage and pursue other threads
 - [ ] **Prep depth matches layer** — immediate content is fully detailed, near-term content is sketched, distant content is bullet points
 
-Tag: `[MODULE AUDIT: session X — pass/fail — issues found]`
+Tag: `[MODULE AUDIT: quest name — pass/fail — issues found]`
 
 ### Step 5: Delivery
-Present the module to the DM with:
-- Brief summary of the session's dramatic arc
+Present the quest module to the DM with:
+- Brief summary of the quest's situation and dramatic question
+- Where this quest fits on the quest board (level range, connections)
 - Any DM prep notes (voices to practice, props to prepare, handouts to print)
 - Ambiance playlist summary (all music/sound cues from the module in order)
 - Questions for the DM about customization preferences
+- Reminder: **"Run this quest when your players choose to engage with it — not before."**
 
 ---
 
 ## Module Integration with Campaign Systems
 
 ### Tension Architecture
-Each module's position in the tension arc is noted in the synopsis:
-- **Rising:** Building toward a peak — this session escalates
-- **Peak:** The session IS the climax — highest stakes
-- **Valley:** Recovery session — lower stakes, character development
-- **Plateau:** Steady state — advancing plot without major escalation
+Quest modules are tagged with their tension role in the campaign:
+- **Escalation Quest:** Raises the stakes — introduces a new threat, reveals a secret, or advances the opposition's clock
+- **Peak Quest:** A major climax — confrontation with a significant antagonist or decision
+- **Recovery Quest:** Lower stakes — character development, relationship building, exploration
+- **Buildup Quest:** Steady advancement — the party gains resources, allies, or information
 
-### Session Hooks
-Every module ends with a hook (see Session Wrap-Up). Hook type is selected from the seven types defined in Campaign Format Systems:
-1. **The Mystery Box** — Unanswered question
-2. **The Betrayal Echo** — Trust broken or tested
-3. **The Ticking Clock** — Deadline approaching
-4. **The World Shift** — World changes around PCs
-5. **The Personal Stakes** — PC-specific threat or opportunity
-6. **The Impossible Choice** — Dilemma with no clean answer
-7. **The Promise of Spectacle** — Preview of something epic
+The DM selects which quests to offer based on the campaign's current tension needs. The Campaign Guide tracks the overall tension arc across the quest board.
+
+### Discovery Hooks and Quest Seeding
+Every quest module lists 3+ discovery hooks. The DM seeds these hooks throughout play:
+- **Passive:** Quest board postings, tavern rumors, overheard conversations
+- **Active:** NPC requests, faction assignments, personal backstory connections
+- **Emergent:** Consequences of other quests, Living Clock events, world changes
+- **Accidental:** Travel encounters, exploration finds, random NPC conversations
+
+The DM doesn't "assign" quests — the party chooses what to pursue.
+
+### Living Clock Integration
+Quest modules interact with the Living Clock:
+- **If quest is completed:** What clock stages advance or halt?
+- **If quest is ignored:** What clock stages advance because the situation was not addressed?
+- **If quest fails:** What new situations does this create?
+
+The Campaign Guide tracks clock stages and updates quest availability accordingly.
 
 ### Fever Dream Doctrine
 Every module must pass the "Would You Stream This?" test. If any section would be boring to watch, it must be:
@@ -578,26 +703,37 @@ Every module must pass the "Would You Stream This?" test. If any section would b
 2. Given a story connection, OR
 3. Transformed into something memorable
 
-### Agency Anchors
-Modules must include at least 1 **branching path** or **meaningful choice** per act. These are predesigned moments where PC decisions alter the session's trajectory while still converging on the campaign's driving force resolution.
-
 ---
 
 ## Module vs. Live Session: Key Differences
 
-| Aspect | Pre-Planned Module | Live Session |
+| Aspect | Pre-Planned Quest Module | Live Session |
 |---|---|---|
-| **Output** | Per-session markdown module file | Real-time narration + session log |
-| **DM Role** | Reads and runs the module at their table | Co-facilitates with The Architect |
-| **PC Actions** | Anticipated via branching paths and contingencies | Responded to in real time |
-| **Session Log** | Not generated (module IS the plan) | Generated per prompt/key event |
+| **Output** | Quest-named markdown module files + Campaign Guide | Real-time narration + session log |
+| **Structure** | Quest/situation-based, order-independent | Sequential, responds to player actions |
+| **DM Role** | Selects which module to run based on player choices | Co-facilitates with The Architect |
+| **PC Actions** | Anticipated via multiple approaches and contingencies | Responded to in real time |
+| **Session Log** | Maintained separately in session log file | Generated per prompt/key event |
 | **LLM Markers** | Not used (no ongoing LLM context needed) | Embedded in session logs |
 | **Flexibility** | DM adapts on the fly using DM Notes/Contingencies | Architect adapts in real time |
-| **Best For** | DMs who prep ahead, in-person games, offline use | Online play, solo DMs, real-time assistance |
+| **Session Identity** | Quests span 1+ sessions; session number is bookkeeping | Each prompt/session is a unit |
+| **Best For** | DMs who prep ahead, in-person games, sandbox campaigns | Online play, solo DMs, real-time assistance |
 
 ---
 
 ## Common Module Mistakes
+
+❌ **Session-numbered modules that assume sequence** — `session-01 → session-02 → session-03` implies linear order
+✅ **Quest-named modules that work in any order** — `quest-tower-of-storms.md`, `quest-gnoll-warren.md`
+
+❌ **Assuming prior session outcomes** — "After the party defeated the bandits in the last module..."
+✅ **Self-contained situation descriptions** — "The bandit camp has been raiding trade routes. If already dealt with, the camp is abandoned."
+
+❌ **Single discovery hook** — "The NPC tells the party about the quest"
+✅ **Multiple discovery hooks** — "The party can learn about this from the quest board, tavern rumors, the merchant NPC, or encountering the wreckage during travel"
+
+❌ **No 'if avoided' path** — Module assumes the party WILL engage
+✅ **Living Clock consequences for avoidance** — "If the party never investigates, the situation escalates: the mine collapses, trapping the miners"
 
 ❌ **Bullet-point outline instead of prose** — Modules are narratives, not checklists
 ✅ **Atmospheric read-aloud text with sensory details**
@@ -611,29 +747,29 @@ Modules must include at least 1 **branching path** or **meaningful choice** per 
 ❌ **Generic encounters** — "Fight 4 goblins in a room"
 ✅ **Story-connected encounters with terrain, tactics, and scaling notes**
 
-❌ **Missing consequences** — No link between sessions
-✅ **Consequence table showing what carries forward**
-
-❌ **No timing guidance** — DM can't tell if they're on pace
-✅ **Estimated duration for each part/encounter**
-
 ❌ **Treasure without story** — Random loot table
 ✅ **Every treasure item has a narrative reason for being there**
+
+❌ **No timing guidance** — DM can't tell if they're on pace
+✅ **Estimated duration for each scene/encounter**
 
 ❌ **No ambiance guidance** — DM guesses the mood
 ✅ **Suggested Ambiance field for every scene with specific sound/music cues**
 
 ❌ **No rest pacing** — DM doesn't know when to offer rests
-✅ **Rest Opportunity markers between acts with narrative justification**
+✅ **Rest Opportunity markers with narrative justification**
 
 ❌ **Generic handouts** — Plain text with no in-world flavor
 ✅ **Handouts formatted as in-world documents with condition, authorship, and hidden content**
+
+❌ **Cliffhangers that assume the next module** — "The party must go to the tower next session"
+✅ **Quest outcomes that open possibilities** — "The party now knows about the tower, the smuggler's den, and the faction's betrayal — which thread do they pull?"
 
 ---
 
 ## DM Complexity Rating
 
-Every module header includes a **DM Complexity** rating from ★☆☆☆☆ to ★★★★★ that tells the DM how much preparation effort this specific session requires.
+Every module header includes a **DM Complexity** rating from ★☆☆☆☆ to ★★★★★ that tells the DM how much preparation effort this specific quest module requires.
 
 ### Rating Scale
 
@@ -652,7 +788,7 @@ The rating is determined by the highest-scoring combination of:
 - **Combat Tactics**: Simple melee vs. multi-phase boss with lair actions (simple = low, multi-phase = high)
 - **Branching Paths**: Linear vs. multiple meaningful forks (linear = low, 3+ forks = high)
 - **Props/Handouts**: None vs. multiple in-world documents to prepare (none = low, 3+ = high)
-- **Emotional Range**: Single tone vs. tonal shifts within the session (single = low, 3+ shifts = high)
+- **Emotional Range**: Single tone vs. tonal shifts within the quest (single = low, 3+ shifts = high)
 - **Rules Complexity**: Basic checks vs. complex skill challenges or unusual mechanics (basic = low, unusual = high)
 
 Tag: `[DM COMPLEXITY: ★★★☆☆ — justification]`

@@ -1132,4 +1132,5 @@ Tag: `[SESSION ZERO LENGTH: scales with campaign format]`
 - [31-TEMPORAL-SYSTEMS.md](31-TEMPORAL-SYSTEMS.md) — Living Clock pacing
 - [20-NPC-GENERATION.md](20-NPC-GENERATION.md) — NPC depth tiers
 - [21-FACTION-GENERATION.md](21-FACTION-GENERATION.md) — Faction complexity
+- [53-MODULE-SESSION-FORMAT.md](53-MODULE-SESSION-FORMAT.md) — Quest module format (Quest Board Model)
 - [72-SANDBOX-PREP.md](72-SANDBOX-PREP.md) — Sandbox worldbuilding and Lazy DM prep

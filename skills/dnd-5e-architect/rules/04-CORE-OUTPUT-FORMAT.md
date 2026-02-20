@@ -27,6 +27,8 @@ worlds/
         └── [campaign-name]/
             ├── [campaign-name]-readme.md
             ├── [campaign-name]-pcs.md
+            ├── [campaign-name]-guide.md            # Campaign Guide with quest board (Module Mode)
+            ├── [campaign-name]-quest-[quest-name].md  # Per-quest module file (Module Mode)
             ├── [campaign-name]-session-log.md
             ├── [campaign-name]-plot-web.md
             └── [campaign-name]-canon.md
@@ -172,7 +174,13 @@ Full tag library for consistent worldbuilding documentation:
 `[LAZY DM PREP: steps completed — session X]`,
 `[PREP DEPTH: Layer 1/2/3/4 — session range]`,
 `[SANDBOX AUDIT: world/module — pass/fail — missing elements]`,
-`[SANDBOX FORMAT: One-Shot/Short-Arc/Full-Campaign — active situations: X]`
+`[SANDBOX FORMAT: One-Shot/Short-Arc/Full-Campaign — active situations: X]`,
+`[QUEST MODULE: quest name — tier/level range]`,
+`[PREREQUISITE: type — requirement — alternative paths: X]`,
+`[RAILROAD JUSTIFIED: reason — gate type]`,
+`[MODULE PLANNING: campaign name — quest board — quest count]`,
+`[MODULE AUDIT: quest name — pass/fail — issues found]`,
+`[DM COMPLEXITY: ★★★☆☆ — justification]`
 
 ---
 

@@ -368,13 +368,13 @@ Tag: `[SESSION START: PC file verified/created]`
 
 > *"How would you like to run this campaign?"*
 >
-> **Option A — Pre-Planned Module:** Generate complete per-session module files in official D&D campaign module format — with read-aloud text, DM notes, encounters, NPC dialogue, and appendices. The DM takes the module and runs it at their table.
+> **Option A — Pre-Planned Module:** Generate a modular adventure — a collection of standalone quest/situation modules (like *Dragon of Icespire Peak*) plus a Campaign Guide with a quest board. Each quest module is self-contained and order-independent. The DM picks which module to run based on player choices.
 >
 > **Option B — Live Session:** Run the session here with The Architect as facilitator. The Architect narrates, tracks events, suggests actions, and maintains session logs. DM and PCs make ALL decisions.
 
 Tag: `[SESSION MODE: Module/Live]`
 
-**If Module:** Generate per-session module files following the Pre-Planned Session Module Format (see section below).
+**If Module:** Generate quest modules and a Campaign Guide following the Pre-Planned Module Format (see section below).
 **If Live:** Activate the Live Session Protocol (see Live Session Management section below).
 
 This question is asked ONCE per campaign and persists unless the DM explicitly changes it.
@@ -474,30 +474,61 @@ Tag: `[PREP DEPTH: Layer 1/2/3/4 — session range]`
 
 ---
 
-## 📖 PRE-PLANNED SESSION MODULE FORMAT
-*(Added v2.6 — per-session module files in official D&D campaign module style)*
+## 📖 PRE-PLANNED MODULE FORMAT
+*(Added v2.6 — quest-based modular adventure design in official D&D module style)*
 
-When the DM chooses **Pre-Planned Module** mode, The Architect generates a **standalone session module file** for each session — a markdown document that reads like an official D&D campaign module (e.g., *Curse of Strahd*, *Storm King's Thunder*).
+When the DM chooses **Pre-Planned Module** mode, The Architect generates a **modular adventure** — a collection of standalone quest and situation modules the DM can run in any order based on player choices.
+
+> **This is NOT a session-by-session script.** It is a toolkit of prepared situations, quests, locations, and encounters — like *Dragon of Icespire Peak* — where ALL possibilities are planned and written, and the DM selects what to run based on what the players choose to do.
+
+### The Players' Story Doctrine
+> **What you prep might NOT be what the players will do. It is THEIR story, not yours.**
+
+This is the single most important rule of module generation. Every module, quest, and situation exists as a **possibility** — not a mandate.
+
+**Anti-Linear Mandate:**
+1. Modules are situations, not sessions. A module describes WHAT IS HAPPENING — not what happens on a specific night of play.
+2. No predetermined sequence. Module A does not "lead to" Module B unless there is a justified prerequisite.
+3. Session numbers are DM bookkeeping, not module identity.
+4. Prep the world, let the players write the story.
+
+**BAD:** `session-01-module.md` → `session-02-module.md` → `session-03-module.md` with session 2 assuming session 1's outcomes
+**GOOD:** `quest-tower-of-storms.md`, `quest-gnoll-warren.md`, `quest-merchants-plea.md` — any order
+
+### When Railroading Is Justified
+Railroading is PROHIBITED by default. Narrow exceptions for **soft gates**:
+- **CR / Level Gate:** Encounter would be lethal for underleveled PCs — signal danger, don't block access
+- **Item / Key Requirement:** Specific object needed — ensure obtainable from 2+ different quests
+- **Knowledge Gate:** Players need specific info — make discoverable through multiple paths
+- **Story Prerequisite:** A prior event must logically have occurred — use Living Clock to trigger
+- **Safety Gate:** Content requires table consent — flag in quest header with content warning
+
+**Rules:** Minimize prerequisites. Never single-source a prerequisite. Signal danger, don't block access. Mark prerequisites clearly.
+
+Tag: `[QUEST MODULE: quest name — tier/level range]`
+Tag: `[PREREQUISITE: type — requirement — alternative paths: X]`
+Tag: `[RAILROAD JUSTIFIED: reason — gate type]`
 
 ### The Module Standard
-> **Every session module must be indistinguishable in quality and structure from a professionally published D&D adventure module.**
+> **Every quest module must be indistinguishable in quality and structure from a professionally published D&D adventure module.**
 
-### Module File
-- **File:** `[campaign-name]-session-[number]-module.md`
-- **Location:** `worlds/[world-name]/campaigns/[campaign-name]/`
-- One file per session — complete, self-contained, ready to run at the table
+### Module Architecture: The Quest Board Model
+Campaign modules follow the **Quest Board Model** (inspired by *Dragon of Icespire Peak*):
+1. **Campaign Guide** (`[campaign-name]-guide.md`) — Master document with quest board, faction overview, Living Clock stages, regional map, PC hooks
+2. **Quest Modules** (`[campaign-name]-quest-[quest-name].md`) — Standalone adventure modules, each describing one situation/quest/location
+3. **Session Log** (`[campaign-name]-session-log.md`) — Records what actually happened; session numbers live HERE, not in modules
 
-### Module Structure (Per Session)
-Each module follows a mandatory template:
-1. **Header** — Campaign name, session number/title, duration, tier, level, themes, tone, **DM Complexity rating**, recap
-2. **"Previously On..." Recap** — 4-6 sentence read-aloud recap script for groups that play infrequently
-3. **Adventure Synopsis** — DM-only overview with dramatic question and session arc
-4. **Session Opening** — Read-aloud boxed text + scene setup + DM notes
-5. **Part 1 (Setup)** — Scenes with read-aloud text, NPC roleplay guides, skill checks, branching paths, **rest opportunity markers**
-6. **Part 2 (Confrontation)** — Exploration areas (keyed locations), encounters (tactical setup, enemy forces, tactics, scaling), rising action, **rest opportunity markers**
-7. **Part 3 (Climax/Resolution)** — Session climax with possible outcomes (victory, partial, failure, creative), consequences
-8. **Session Wrap-Up** — Resolution, closing read-aloud, consequence table, cliffhanger/next session hook
-9. **Appendices** — NPC quick reference, stat blocks, **handouts (Handout Generation Standard)**, maps, treasure/rewards, faction clock updates, DM contingency plans, cross-references
+### Quest Module Structure
+Each quest module follows a mandatory template:
+1. **Header** — Campaign, quest type, recommended level, estimated duration, DM Complexity rating, prerequisites, location, themes, tone, driving force connection, status
+2. **Quest Overview** — DM-only situation description, dramatic question, discovery hooks (3+ sources)
+3. **Quest Opening** — Read-aloud arrival text (doesn't assume how party got here) + scene setup + DM notes
+4. **Situations and Scenes** — Active forces and events (NOT ordered acts); each scene has trigger, portable flag, NPC guides, skill checks, player approaches (including "if PCs avoid entirely")
+5. **Exploration Areas** — Keyed locations with area descriptions that exist whether or not the party visits
+6. **Encounters** — Tactical setup, enemy forces, tactics, scaling, with Connection Test and portable flag
+7. **Quest Climax** — Trigger conditions, possible outcomes (victory, partial, failure, creative, abandoned/ignored)
+8. **Quest Resolution and Consequences** — Outcome descriptions, consequences table (affects which quests), connections to other quests, rewards
+9. **Appendices** — NPC quick reference, stat blocks, handouts, maps, treasure/rewards, faction clock updates, DM contingency plans, cross-references (Campaign Guide + related quests)
 
 ### Module Writing Standards
 - **Read-aloud text:** Second person present tense, sensory details, 3-5 sentences, never assumes PC actions
@@ -526,17 +557,17 @@ Session 0 uses a different template (not a play session):
 Tag: `[SESSION 0 MODULE: campaign setup — character creation — safety tools]`
 
 ### Module Scope by Format
-| Format | Modules | Length | Encounters | NPCs w/ Dialogue |
+| Format | Quest Modules | Length | Encounters | NPCs w/ Dialogue |
 |---|---|---|---|---|
-| **One-Shot** | 1 | 15-25 pages | 2-4 | 3-5 |
-| **Short Arc** | 3-8 | 10-18 pages each | 1-3 per module | 3-6 |
-| **Full Campaign** | 10+ | 12-20 pages each | 2-4 per module | 4-8 |
+| **One-Shot** | 1 self-contained | 15-25 pages | 2-4 | 3-5 |
+| **Short Arc** | 3-8 + Campaign Guide | 10-18 pages each | 1-3 per module | 3-6 |
+| **Full Campaign** | 10+ + Campaign Guide | 12-20 pages each | 2-4 per module | 4-8 |
 
 ### Module Audit
-Before delivery, verify: encounters pass Connection Test, read-aloud text uses correct voice, no PC actions assumed, DM Notes anticipate reactions, NPC dialogue is distinct, treasure has story connections, scaling notes provided, timing estimates realistic, cliffhanger compelling, cross-references correct, rest opportunities placed appropriately, ambiance suggestions included, DM Complexity rating accurate, handouts follow standard, "Previously On..." recap bridges from last session, sandbox signal language used (situations not scripts), portable elements identified, branching paths include sandbox options, prep depth matches layer.
+Before delivery, verify: **order-independence** (works regardless of prior quests), **no session-number assumptions**, **discovery hooks** (3+ ways to learn about quest), **prerequisite minimization**, **portable elements identified**, **"if avoided" path exists** (Living Clock consequences), **player approach variety** (3+ approaches including unexpected), encounters pass Connection Test, read-aloud text uses correct voice, no PC actions assumed, DM Notes anticipate reactions, NPC dialogue is distinct, treasure has story connections, scaling notes provided, timing estimates realistic, cross-references to Campaign Guide and related quests correct, rest opportunities placed, ambiance suggestions included, DM Complexity rating accurate, handouts follow standard, sandbox signal language used (situations not scripts), prep depth matches layer.
 
-Tag: `[SESSION MODULE: session number — title]`
-Tag: `[MODULE AUDIT: session X — pass/fail — issues found]`
+Tag: `[MODULE PLANNING: campaign name — quest board — quest count]`
+Tag: `[MODULE AUDIT: quest name — pass/fail — issues found]`
 Tag: `[DM COMPLEXITY: ★★★☆☆ — justification]`
 
 ---
@@ -1371,7 +1402,8 @@ All world content must be written to organized markdown files in a standardized 
         ├── [campaign-name]-readme.md         ← Campaign overview
         ├── [campaign-name]-pcs.md            ← PC identity file
         ├── [campaign-name]-session-logs.md   ← Live session audit trail (Live Mode only)
-        ├── [campaign-name]-session-[N]-module.md  ← Per-session module file (Module Mode only)
+        ├── [campaign-name]-guide.md            ← Campaign Guide with quest board (Module Mode only)
+        ├── [campaign-name]-quest-[quest-name].md  ← Per-quest module file (Module Mode only)
         ├── [campaign-name]-plot-web.md       ← Campaign plot web
         └── [campaign-name]-canon.md          ← Campaign canon lock
 ```

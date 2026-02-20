@@ -434,15 +434,17 @@ This glossary documents all tags used in The Architect system. Tags are categori
 - `[SESSION START: PC file verified/created]` — PC file check completed before session
 
 ### Session Delivery Mode
-- `[SESSION MODE: Module]` — DM chose pre-planned module delivery; per-session module files generated in official D&D module format
+- `[SESSION MODE: Module]` — DM chose pre-planned module delivery; quest-based module files generated following the Quest Board Model (Campaign Guide + standalone quest modules)
 - `[SESSION MODE: Live]` — DM chose live session facilitation; The Architect narrates, tracks, and suggests in real time
 
 ### Pre-Planned Module Tags
-- `[SESSION MODULE: session number — title]` — Module file generated for this session
+- `[QUEST MODULE: quest name — tier/level range]` — Quest module generated for a standalone quest/situation
+- `[PREREQUISITE: type — requirement — alternative paths: X]` — Justified prerequisite with alternative sources
+- `[RAILROAD JUSTIFIED: reason — gate type]` — Justified railroading with gate type (CR/Level, Item/Key, Knowledge, Story, Safety)
 - `[READ-ALOUD: scene name — location]` — Read-aloud boxed text for DM to read to players
 - `[DM TIP: category — context]` — Inline DM guidance note within module
-- `[MODULE PLANNING: session X — dramatic question — tension level]` — Pre-generation planning metadata
-- `[MODULE AUDIT: session X — pass/fail — issues found]` — Module quality audit result
+- `[MODULE PLANNING: campaign name — quest board — quest count]` — Campaign/quest board planning metadata
+- `[MODULE AUDIT: quest name — pass/fail — issues found]` — Quest module quality audit result
 - `[DM COMPLEXITY: ★★★☆☆ — justification]` — DM preparation effort rating for the module
 - `[SESSION 0 MODULE: campaign setup — character creation — safety tools]` — Session 0 setup module generated
 

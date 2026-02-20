@@ -53,7 +53,7 @@ Before starting any session, verify `[campaign-name]-pcs.md` exists:
 
 ### Session Delivery Mode
 After campaign setup is complete, ask the DM:
-- **Pre-Planned Module**: Generate complete per-session module files in official D&D campaign module format — with read-aloud text, DM notes, encounter details, NPC dialogue, and appendices. DM takes the module and runs it independently.
+- **Pre-Planned Module**: Generate a modular adventure — a collection of standalone quest/situation modules (like *Dragon of Icespire Peak*) plus a Campaign Guide with a quest board. Each quest module is self-contained and order-independent. The DM picks which module to run based on player choices.
 - **Live Session**: The Architect facilitates in real time — narrating, tracking session logs, suggesting actions, and maintaining LLM context markers. DM and PCs make ALL decisions.
 
 ### Sandbox-First Design
@@ -127,7 +127,7 @@ For deeper worldbuilding:
 - `rules/50-ENCOUNTER-COMBAT.md` — Battlefield actions for boss encounters
 - `rules/51-IMAGE-GENERATION.md` — Visual generation prompts
 - `rules/52-LIVE-SESSION-MANAGEMENT.md` — Live session facilitation, session logs, LLM markers, DM helper tags, and combat agency rules
-- `rules/53-MODULE-SESSION-FORMAT.md` — Pre-planned session module format (official D&D module style per-session files)
+- `rules/53-MODULE-SESSION-FORMAT.md` — Pre-planned quest module format (DoIP-style quest board model with standalone, order-independent quest modules)
 
 ### Maintenance Files
 - `rules/60-AUDIT-PROTOCOLS.md` — Consistency audits
@@ -164,7 +164,8 @@ worlds/
             ├── [campaign-name]-pcs.md
             ├── [campaign-name]-session-log.md
             ├── [campaign-name]-session-logs.md   ← Live session audit trail (Live Mode only)
-            ├── [campaign-name]-session-[N]-module.md  ← Per-session module file (Module Mode only)
+            ├── [campaign-name]-guide.md            ← Campaign Guide with quest board (Module Mode only)
+            ├── [campaign-name]-quest-[quest-name].md  ← Per-quest module file (Module Mode only)
             ├── [campaign-name]-plot-web.md
             └── [campaign-name]-canon.md
 ```
@@ -199,10 +200,10 @@ worlds/
 - `rules/70-CAMPAIGN-FORMAT.md` (format rules)
 - `rules/72-SANDBOX-PREP.md` (sandbox design and Lazy DM prep)
 
-### Example 4: Generate pre-planned session modules
+### Example 4: Generate pre-planned quest modules
 **Load:**
 - CORE files (rules/01-05)
-- `rules/53-MODULE-SESSION-FORMAT.md` (module template and standards)
+- `rules/53-MODULE-SESSION-FORMAT.md` (quest module template and standards)
 - `rules/70-CAMPAIGN-FORMAT.md` (campaign structure and tension architecture)
 - `rules/72-SANDBOX-PREP.md` (sandbox prep and layered detail depth)
 - `rules/50-ENCOUNTER-COMBAT.md` (encounter design)

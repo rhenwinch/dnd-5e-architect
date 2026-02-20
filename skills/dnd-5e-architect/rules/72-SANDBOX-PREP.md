@@ -18,6 +18,7 @@ This does NOT mean plotless. It means the world has active situations, and the p
 2. **Stories emerge from play.** The Architect does NOT generate a scripted narrative path. It generates situations, locations, NPCs, and active faction goals that create emergent stories at the table.
 3. **Linear path is optional, not mandatory.** Players may pursue a main driving force in a linear fashion — but can always break off for side quests, exploration, or player-driven goals and return later.
 4. **Prep situations, not stories.** Modules and campaign prep describe WHAT IS HAPPENING in the world, not WHAT WILL HAPPEN to the players.
+5. **Modules are quests, not sessions.** When generating Pre-Planned Modules, create quest/situation-based modules — NOT session-numbered files. The DM runs whichever quest module fits what the players chose to do. See [53-MODULE-SESSION-FORMAT.md](53-MODULE-SESSION-FORMAT.md) for the Players' Story Doctrine and Quest Board Model.
 
 Tag: `[SANDBOX: open-world design — situations prepped, not stories]`
 
@@ -225,13 +226,18 @@ When generating a campaign or world, The Architect MUST ensure these sandbox ele
 - [ ] **Consequence density** — player choices ripple visibly through the world
 - [ ] **Return paths** — players can always return to the main quest or previously visited locations with updated world states
 
-### Module Sandbox Elements (for Pre-Planned Modules)
+### Module Sandbox Elements (for Pre-Planned Quest Modules)
+- [ ] **Quest-based, not session-based** — modules are named by quest/situation, not session number (`quest-tower-of-storms.md`, not `session-02-module.md`)
+- [ ] **Order-independent by default** — each module works regardless of which quests came before it (unless justified prerequisite exists)
+- [ ] **Discovery hooks (3+)** — each quest module lists at least 3 ways the party can learn about it
+- [ ] **"If avoided" path** — every module describes what happens if the party never engages (Living Clock consequences)
 - [ ] **Branching situations, not branching storylines** — describe what IS, not what MUST happen
 - [ ] **DM contingencies for off-script play** — every module includes "if PCs go elsewhere" guidance
 - [ ] **Layered prep depth** — immediate detail fading to outlines fading to bullet points
 - [ ] **Portable scenes** — scenes that can be redeployed to different locations if players skip the intended one
 - [ ] **Strong start** — a compelling opening scene that doesn't require specific player actions to trigger
 - [ ] **NPC portability** — key NPCs can appear wherever the players go, not just their assigned locations
+- [ ] **No session-sequence assumptions** — no references to "session 1" or "last session" in quest module body
 
 Tag: `[SANDBOX AUDIT: world/module — pass/fail — missing elements]`
 
